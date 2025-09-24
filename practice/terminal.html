@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>H2Vim</title>
+		<title>Vim Basics</title>
+<style>
+img{
+	max-width: 50%;
+	max-height: 400px;
+	height: auto;
+</style>
 	</head>
 	<body>
 		<h1>How to Vim!</h1>
 		<hr>
+		
+		<h2>Subjects I will be talking about</h2>
 		<ul>
-			<h2>Subjects I will be talking about</h2>
 			<li>vim</li>
 			<li>write</li>
 			<li>quit</li>
 			<li>vimrc</li>
-		</ul>	
+		</ul>
+		<h2>Vim</h2>
+		<p>The first command you will ever use is <samp>vim</samp>.</p>
+		<p>You will see a help page with all of the commands. One of the most important commands you will use is <samp>:q</samp>.</p>
+		<img src="vim.png" alt="vim">
+		<p>When you open vim, it will put you in an editor. The way to get back to the terminal is by using <samp>:q</samp>.</p>
+		<p>Doing <samp>vim [file]</samp> will let you edit a file. There are 3 main modes.
+		<ol>
+			<li>View - The default mode, you can also click <kbd>Esc</kbd> on any other mode to re-enable this.</li>
+			<li>Insert - The main editing mode, you can click <kbd>I</kbd> to enable this.</li>
+			<li>Visual - The main selecting mode, you can click <kbd>V</kbd> to enable this.</li>
+		</ol>
+		<h2>Write</h2>
+		<p>When you are done editing, you may want to save all of your work (unless you made a big oopsie).</p>
+		<p>Use <samp>:write<samp> while in <b>View</b> mode to save your work.</p>
+		<h2>Quit</h2>
+		<p>After saving your work, you may either stay or leave the editor. To leave the editor, type in</p>
+		<p>the command <samp>:q</samp>. If you forget to save your work, it will give you a warning. But</p>
+		<p>if you still want to delete all of your progress, you can add <samp>!</samp> in front of the </p>
+		<p>command to override the warning.</p>
+		<h2>vimrc</h2>  
+		<p>Vimrc is a configuration file for making your vim look pretty neat. Here is an example file </p>
+		<p><code>syntax enable</code> - Cool syntax colors<br><code>filetype indent on</code> - Enables automatic indent<br><code>set background=dark</code> - Makes the background dark<br><code>colorscheme desert</code> - Makes your syntax color scheme desert-themed<br><code>set number</code> - Makes the - symbol on the left numbered<br><code>set relativenumber</code> - Makes all the numbers near your line rerelative to your current line (helps with line by line surfing)</p>
 	</body>
-<html>
+</html>
