@@ -4,3 +4,9 @@ body{
     padding: 20px;
     background-color: #2f604d;
 }
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #00e362;
+  color: black;
+}
