@@ -10,3 +10,6 @@ footer {
   background-color: #00e362;
   color: black;
 }
+table {
+  border: 1px solid black;
+}
