@@ -24,3 +24,28 @@ body{
     flex-wrap: wrap;
     flex-direction: column;
 }
+.nav{
+    background-color: rgb(81, 133, 16);
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f0f0; 
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+}
+.biglink{
+    font-size: 30px;
+    color: blue;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: 2px solid black;
+    border-radius: 5px;
+}
