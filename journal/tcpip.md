@@ -25,4 +25,4 @@ Some packets may be modified or lost in the transfer.
 The target will send a signal to help verify that the transfer was successful, that they got the message.
 Protocols in this layer:
 HTTP (Hyper Text Transport Protocol)
-WSS (WebSocket Secure Protocol)
+WS (WebSocket Protocol)
