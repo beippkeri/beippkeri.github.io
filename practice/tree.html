@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <title>CSS Tree Practice</title>
+        <script src="../js/validate.js"></script>
+        <script src="../js/tree.js"></script>
+        <style>
+body {
+    background-image: linear-gradient(to bottom, #AB2280, #4722AB);
+    display: flex;
+}
+#addornament{
+    background-color: green;
+    color:black;
+    font-size: 3vh;
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    top: 20vh;
+    left: 20vh;
+    margin-right: 10px;
+}
+#addornament:hover, #removeornament:hover {
+    border: lightgreen;}
+#removeornament {
+    background-color: green;
+    color:black;
+    font-size: 3vh;
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    top: 20vh;
+    left: 41vh;
+    margin-right: 10px;
+}
+#container {
+    margin: auto;
+    width: 70vh;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tree {
+    width: 0px;
+    height: 0px;
+    border-bottom: 70vh solid mediumseagreen;
+    border-left: 30vh solid transparent;
+    border-right: 30vh solid transparent;
+    position: absolute;
+}
+#ornament1 {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    left: 150px;
+    top: 50vh;
+}
+#ornament2 {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    position: absolute;
+    left: 300px;
+    top: 50vh;
+}
+#ornament3 {
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    position: absolute;
+    left: 150px;
+    top: 60vh;
+}
+#ornament4 {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    position: absolute;
+    left: 50px;
+    top: 60vh;
+}
+#ornament5 {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    position: absolute;
+    left: -100px;
+    top: 40vh;
+}
+#ornament6 {
+    width: 30px;
+    height: 30px;
+    background-color: purple;
+    position: absolute;
+    left: -150px;
+    top: 65vh;
+}
+#ornament7 {
+    width: 30px;
+    height: 30px;
+    background-color: magenta;
+    position: absolute;
+    left: -75px;
+    top: 10vh;
+}
+#ornament8 {
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+    position: absolute;
+    left: 80px;
+    top: 20vh;
+}
+#ornament9 {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    left: 65px;
+    top: 30vh;
+}
+#ornament10 {
+    width: 30px;
+    height: 30px;
+    background-color: papayawhip;
+    position: absolute;
+    left: -300px;
+    top: 50vh;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>This is a tree</h1>
+        <button id="addornament" onclick="CreateOrnament()">Click this to add an ornament!</button>
+        <button id="removeornament" onclick="RemoveOrnament()">Click this to remove an ornament!</button>
+        <div id="container">
+            <div id="tree">
+                <div id="ornament1" class="ornament"></div>
+                <div id="ornament2" class="ornament"></div>
+                <div id="ornament3" class="ornament"></div>
+                <div id="ornament4" class="ornament"></div>
+                <div id="ornament5" class="ornament"></div>
+                <div id="ornament6" class="ornament"></div>
+                <div id="ornament7" class="ornament"></div>
+                <div id="ornament8" class="ornament"></div>
+                <div id="ornament9" class="ornament"></div>
+                <div id="ornament10" class="ornament"></div>
+            </div>
+        </div>
+    </body>
+</html>

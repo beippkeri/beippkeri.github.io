@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" id="food">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Position Practice</title>
+        <script src="../js/validate.js"></script>
+        <link rel="stylesheet" href="../styles/position.css">
+        <style>
+            body {
+                background-color: lemonchiffon;
+            }
+            #food {
+                background-color: black;
+                background-image: linear-gradient(to bottom, lemonchiffon, blue);
+            }
+            #spamton{
+                width: 100px;
+                height: 500px;
+                background-color: pink;
+                position: relative;
+                left: 100px;
+                top: 100px;
+            }
+            #tenna{
+                width: 80px;
+                height: 100px;
+                background-color: green;
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>This an h1</h1>
+            <div id="spamton">
+                <div id="tenna">
+                    <p>hi im tenna i hope i can entertain you</p>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>
