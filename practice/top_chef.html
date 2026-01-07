@@ -4,12 +4,61 @@
         <title>Dinosaur Museum</title>
         <link rel="icon" href="../images/dino.ico" type="image/x-icon">
         <style>
+    body {
+        text-decoration-style: wavy;
+        background-color: linen;
+    }
+    .main {
+        height: 100vh;
+        display: grid;
+        font-size: 32px;
+        color: darkgreen;
+        grid: 
+            'header header header' 1fr
+            'nav main side' 8fr
+            'footer footer footer' 1fr
+            /200px 1fr 200px;
+        gap: 10px;
+    }
+    #header {
+        grid-area: header;
+        text-align: left;
+        font-size: 50px;
+        color: darkgreen;
+    }
+    #main {
+         grid-area: main;
+         text-align: left;
+         font-size: 16px;
+         color: black;
+         background-image: url('../images/dino.png');
+    }
+    #nav {
+        grid-area: nav;
+        text-align: center;
+        font-size: 24px;
+        background-color: darkred;
+        color: black;
+    }
         </style>
         <script>
+function dinoAttack() {
+for (let i=0; i < 200; i++){
+    alert("the dinosaurs have attacked!!!!!!!!!!!!!!!");
+}
+}
         </script>
     </head>
     <body>
-        <h1>Welcome to the Dinosaur Museum</h1>
-        <p>Explore the fascinating world of dinosaurs!</p>
+        <div class="main">
+            <div id="header">Ethan's Dino Museum</div>
+            <div id="main">   
+            <h1>Welcome to the Dinosaur Museum</h1>
+            <p>Explore the fascinating world of dinosaurs!</p>
+            </div>
+            <div id="nav">
+                <button style="margin-top: 35vh;" onclick="dinoAttack()">Do not touch</button>
+            </div>
+        </div>
     </body>
 </html>
