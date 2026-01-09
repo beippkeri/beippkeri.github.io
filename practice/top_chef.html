@@ -28,26 +28,34 @@
         color: darkgreen;
         background-image: url('../images/dino.png');
         grid: 
-            'header header header' 1fr
+            'header header header-right' 1fr
             'nav main main' 8fr
             'footer footer footer' 1fr
             /200px 1fr 200px;
         gap: 10px;
     }
-    #header {
+    #headerhead {
         grid-area: header;
         text-align: left;
         font-size: 50px;
         color: darkgreen;
+        background-color: linen;
     }
-    #main {
+    #headerrighthead {
+        grid-area: header-right;
+        text-align: left;
+        font-size: 50px;
+        color: darkgreen;
+        background-color: linen;
+    }
+    #mainhead {
          grid-area: main;
          text-align: left;
          font-size: 16px;
          color: black;
          background-color: linen;
     }
-    #nav {
+    #navhead {
         grid-area: nav;
         text-align: center;
         font-size: 24px;
@@ -64,12 +72,16 @@ for (let i=0; i < 200; i++){
     </head>
     <body>
         <div class="heading">
-            <div id="header">Ethan's Dino Museum</div>
-            <div id="main">   
+            <div id="headerhead">
+            <h1>Ethan's Dino Museum</h1>
+            <h2 style="text-align: right;"><a href="chocolates.html">Contact us!</a></h2>
+            </div>
+        </div>
+            <div id="mainhead">   
             <h1>Welcome to the Dinosaur Museum</h1>
             <p>Explore the fascinating world of dinosaurs!</p>
             </div>
-            <div id="nav">
+            <div id="navhead">
                 <button style="margin-top: 35vh;" onclick="dinoAttack()">Do not touch</button>
             </div>
         </div>
