@@ -3,19 +3,33 @@
     <head>
         <title>Dinosaur Museum</title>
         <link rel="icon" href="../images/dino.ico" type="image/x-icon">
+        <script src="../js/validate.js"></script>
         <style>
     body {
         text-decoration-style: wavy;
-        background-color: linen;
     }
-    .main {
+    .heading {
         height: 100vh;
         display: grid;
         font-size: 32px;
         color: darkgreen;
+        background-image: url('../images/dino.png');
         grid: 
             'header header header' 1fr
             'nav main side' 8fr
+            'footer footer footer' 1fr
+            /200px 1fr 200px;
+        gap: 10px;
+    }
+    .second {
+        height: 100vh;
+        display: grid;
+        font-size: 32px;
+        color: darkgreen;
+        background-image: url('../images/dino.png');
+        grid: 
+            'header header header' 1fr
+            'nav main main' 8fr
             'footer footer footer' 1fr
             /200px 1fr 200px;
         gap: 10px;
@@ -31,7 +45,7 @@
          text-align: left;
          font-size: 16px;
          color: black;
-         background-image: url('../images/dino.png');
+         background-color: linen;
     }
     #nav {
         grid-area: nav;
@@ -44,13 +58,12 @@
         <script>
 function dinoAttack() {
 for (let i=0; i < 200; i++){
-    alert("the dinosaurs have attacked!!!!!!!!!!!!!!!");
-}
+    alert("the dinosaurs have attacked!!!!!!!!!!!!!!!");}
 }
         </script>
     </head>
     <body>
-        <div class="main">
+        <div class="heading">
             <div id="header">Ethan's Dino Museum</div>
             <div id="main">   
             <h1>Welcome to the Dinosaur Museum</h1>
@@ -59,6 +72,8 @@ for (let i=0; i < 200; i++){
             <div id="nav">
                 <button style="margin-top: 35vh;" onclick="dinoAttack()">Do not touch</button>
             </div>
+        </div>
+        <div class="second">
         </div>
     </body>
 </html>
