@@ -7,46 +7,62 @@
         <style>
     body {
         text-decoration-style: wavy;
+        background-color: linen;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+    }
+    a {
+        text-decoration: none;
+        color: white;
     }
     .heading {
         height: 100vh;
         display: grid;
         font-size: 32px;
         color: darkgreen;
-        background-image: url('../images/dino.png');
-        grid: 
-            'header header header' 1fr
+        grid:
             'nav main side' 8fr
             'footer footer footer' 1fr
             /200px 1fr 200px;
-        gap: 10px;
     }
     .second {
         height: 100vh;
         display: grid;
         font-size: 32px;
         color: darkgreen;
-        background-image: url('../images/dino.png');
+        background-color: linen;
         grid: 
-            'header header header-right' 1fr
-            'nav main main' 8fr
-            'footer footer footer' 1fr
+            'header header header' 1fr
+            'side main main' 16fr
+            'footer footer footer' 2fr
             /200px 1fr 200px;
         gap: 10px;
+    }
+    #main-nav {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background-color: darkgreen;
+        padding: 10px;
+        font-size: 20px;
+        color: white;
+        z-index: 1000;
+
     }
     #headerhead {
         grid-area: header;
         text-align: left;
-        font-size: 50px;
+        font-size: 25px;
         color: darkgreen;
-        background-color: linen;
+        background-color: black;
     }
-    #headerrighthead {
-        grid-area: header-right;
+    #titlehead {
+        grid-area: title;
         text-align: left;
         font-size: 50px;
         color: darkgreen;
-        background-color: linen;
     }
     #mainhead {
          grid-area: main;
@@ -55,7 +71,34 @@
          color: black;
          background-color: linen;
     }
-    #navhead {
+    #sidehead {
+        grid-area: nav;
+        text-align: center;
+        font-size: 24px;
+        background-color: darkred;
+        color: black;
+    }
+    #headersecond {
+        grid-area: header;
+        text-align: left;
+        font-size: 25px;
+        color: darkgreen;
+        background-color: linen;
+    }
+    #titlesecond {
+        grid-area: title;
+        text-align: left;
+        font-size: 50px;
+        color: darkgreen;
+    }
+    #mainsecond {
+         grid-area: main;
+         text-align: left;
+         font-size: 16px;
+         color: black;
+         background-color: linen;
+    }
+    #navsecond {
         grid-area: nav;
         text-align: center;
         font-size: 24px;
@@ -71,21 +114,27 @@ for (let i=0; i < 200; i++){
         </script>
     </head>
     <body>
+        <nav id="main-nav">
+            <h1>Ethan's Dino Museum </h1>
+            <a href="top_chef.html" style="margin-left: 50vw;">Home</a>
+            <a href="chocolates.html" style="margin-left: 20px;">Contact Us</a>
+            <a href="holy_grail.html" style="margin-left: 20px;">About Us</a>
+        </nav>
         <div class="heading">
-            <div id="headerhead">
-            <h1>Ethan's Dino Museum</h1>
-            <h2 style="text-align: right;"><a href="chocolates.html">Contact us!</a></h2>
-            </div>
-        </div>
             <div id="mainhead">   
             <h1>Welcome to the Dinosaur Museum</h1>
             <p>Explore the fascinating world of dinosaurs!</p>
             </div>
-            <div id="navhead">
+            <div id="sidehead">
                 <button style="margin-top: 35vh;" onclick="dinoAttack()">Do not touch</button>
             </div>
         </div>
         <div class="second">
+            <div id="headersecond">
+            <h1>Exhibits</h1>
+            </div>
+            <div id="mainsecond">   
+            <h2>Tyrannosaurus Rex</h2>
         </div>
     </body>
 </html>
