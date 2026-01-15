@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <script src="../js/validate.js">
+console.log('Page loaded');
+function fade (item, ms) {
+    let opacity = item.style.opacity;
+    let interval = 100/ms;
+    while (opacity > 0) {
+        opacity -= interval;
+        item.style.opacity = opacity;
+        time.wait(100);
+    }
+    item.style.opacity = 0;
+}
+function unfade (item, ms) {
+    let opacity = item.style.opacity;
+    let interval = 100/ms;
+    while (opacity < 1) {
+        opacity += interval;
+        item.style.opacity = opacity;
+        time.wait(100);
+    }
+    item.style.opacity = 1;
+}
+while (true) {
+    time.wait(5000);
+    console.log('Changing Image');
+    let img = document.getElementById('swap');
+    if (img.src.includes('red.png')) {
+        fade(img, 2000);
+        img.src = 'media/blue.png';
+        unfade(img, 2000);
+    } else if (img.src.includes('blue.png')) {
+        fade(img, 2000);
+        img.src = 'media/green.png';
+        unfade(img, 2000);
+    } else {
+        fade(img, 2000);
+        img.src = 'media/red.png';
+        unfade(img, 2000);
+    console.log('Image changed to ' + img.src);
+        
+    }
+}
+    </script>
+</head>
+<body>
+    <h1>Test Page</h1>
+    <img src="media/red.png" alt="Test image list" id="swap">
+</body>
+</html>
