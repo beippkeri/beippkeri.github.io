@@ -3,7 +3,7 @@
     height: 120vh;
     display: grid;
     grid:
-        "head head head" 1fr
+        "head title head" 1fr
         "side main side2" 4fr
         "foot foot foot" 1fr
         / 1fr 4fr 1fr;
@@ -11,8 +11,13 @@
 }
 #gallery-header {
     grid-area: head;
-    background-color: #f2f2f2;
-    border-bottom: 2px solid #ccc;
+    justify-content: center;
+    align-items: center;
+}
+#gallery-title {
+    grid-area: title;
+    justify-content: center;
+    align-items: center;
 }
 #gallery-main {
     grid-area: main;
