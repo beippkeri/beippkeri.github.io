@@ -1,12 +1,11 @@
 .gallery {
     width: 100vw;
-    height: 120vh;
+    height: 100vh;
     display: grid;
     grid:
-        "head title head" 1fr
-        "side main side2" 4fr
-        "foot foot foot" 1fr
-        / 1fr 4fr 1fr;
+        "side main" 5fr
+        "foot foot" 1fr
+        / 1fr 5fr;
     
 }
 #gallery-header {
@@ -14,33 +13,42 @@
     justify-content: center;
     align-items: center;
 }
-#gallery-title {
-    grid-area: title;
+#gallery-nav {
+    grid-area: nav;
     justify-content: center;
     align-items: center;
 }
 #gallery-main {
     grid-area: main;
-    padding: 20px;
 }
 #gallery-sidebar {
     grid-area: side;
     background-color: #e6e6e6;
-    border-right: 2px solid #ccc;
-    padding: 20px;
 }
 #gallery-sidebar2 {
     grid-area: side2;
     background-color: #e6e6e6;
-    border-right: 2px solid #ccc;
-    padding: 20px;
 }
 #gallery-footer {
     grid-area: foot;
-    background-color: #f2f2f2;
-    border-top: 2px solid #ccc;
+    background-color: #000000;
     text-align: center;
-    padding: 10px;
+    color:white;
+    grid:
+        "set1 set2 set3 set4" 1fr
+        / 1fr 1fr 1fr 1fr;
+}
+#gallery-footer-set1{
+    grid-area: set1;
+}
+#gallery-footer-set2{
+    grid-area: set2;
+}
+#gallery-footer-set3{
+    grid-area: set3;
+}
+#gallery-footer-set4{
+    grid-area: set4;
 }
 h1 {
     text-align: center;
