@@ -13,10 +13,12 @@ const galleryList = [
 let currentGalleryIndex = 0;
 function carosel() {
 if (img != null && img2 != null) {
-    img.src = assetList[0];
-    img2.src = assetList[1];
+    img.src = galleryList[currentGalleryIndex];
+    img2.src = galleryList[(currentGalleryIndex + 1) % galleryList.length];
+    currentGalleryIndex = (currentGalleryIndex + 2) % galleryList.length;
 } else {
     console.log('Carousel image elements not found');
+    return false;
 }
 }
 const assetList = [
