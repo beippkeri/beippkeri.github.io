@@ -3,31 +3,16 @@
     height: 100vh;
     display: grid;
     grid:
-        "side main" 5fr
+        "main main2" 5fr
         "foot foot" 1fr
-        / 1fr 5fr;
+        / 1fr 1fr;
     
-}
-#gallery-header {
-    grid-area: head;
-    justify-content: center;
-    align-items: center;
-}
-#gallery-nav {
-    grid-area: nav;
-    justify-content: center;
-    align-items: center;
 }
 #gallery-main {
     grid-area: main;
 }
-#gallery-sidebar {
-    grid-area: side;
-    background-color: #e6e6e6;
-}
-#gallery-sidebar2 {
-    grid-area: side2;
-    background-color: #e6e6e6;
+#gallery-main {
+    grid-area: main2;
 }
 #gallery-footer {
     display: grid;
@@ -50,6 +35,11 @@
 }
 #gallery-footer-set4{
     grid-area: set4;
+}
+.footlink {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
 }
 h1 {
     text-align: center;
