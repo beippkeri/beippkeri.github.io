@@ -10,9 +10,11 @@
 }
 #gallery-main {
     grid-area: main;
+    margin: 10px;
 }
-#gallery-main {
+#gallery-main2 {
     grid-area: main2;
+    margin: 10px;
 }
 #gallery-footer {
     display: grid;
@@ -44,4 +46,15 @@
 h1 {
     text-align: center;
     font-size: 60px;
+}
+button {
+    font-size: 24px;
+    padding: 10px;
+    margin-left: 80vw;
+    width: 100px;
+    height: 100px;
+}
+body {
+    margin: 0;
+    padding: 0;
 }
