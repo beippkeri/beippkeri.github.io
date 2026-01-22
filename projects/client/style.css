@@ -30,6 +30,7 @@
     background-color: #e6e6e6;
 }
 #gallery-footer {
+    display: grid;
     grid-area: foot;
     background-color: #000000;
     text-align: center;
