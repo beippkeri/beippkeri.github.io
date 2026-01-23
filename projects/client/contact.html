@@ -19,15 +19,15 @@ body {
     <h3>570-418-5199</h3> -->
     <form action="https://httpbin.org/post" method="POST" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 3vh; color: black;">
         <div id="first-last" style="display: flex; flex-direction: row; gap: 10px; justify-content: center; height: 3vh; margin-bottom: 20px; width: clamp(300px, 80vw, 800px); margin-left: auto; margin-right: auto; font-size: clamp(10px, 1.5vw, 20px); font-weight: bold;">
-            <label for="first-name" style="text-wrap-style: nowrap;">First*</label><br>
+            <label for="first-name" style="text-wrap-style: nowrap;">First<span style="color: red;">*</span></label><br>
             <input type="text" id="first-name" name="first-name" required><br><br>
-            <label for="last-name">Last*</label><br>
+            <label for="last-name">Last<span style="color: red;">*</span></label><br>
             <input type="text" id="last-name" name="last-name" required><br><br>
         </div>
         <div id="email-subject" style="display: flex; flex-direction: row; gap: 10px; justify-content: center; height: 3vh; margin-bottom: 20px; width: clamp(300px, 80vw, 800px); margin-left: auto; margin-right: auto; font-size: clamp(10px, 1.5vw, 20px); font-weight: bold;">
-            <label for="email">Email*</label><br>
+            <label for="email">Email<span style="color: red;">*</span></label><br>
             <input type="email" id="email" name="email" required><br><br>
-            <label for="subject">Subject*</label><br>
+            <label for="subject">Subject<span style="color: red;">*</span></label><br>
             <input type="text" id="subject" name="subject" required><br><br>
         </div>
         <label for="message">Leave me a message:</label><br>
