@@ -12,11 +12,18 @@ body {
     color: #000;
     border-radius: 10px;
 }
+#location {
+    display: grid;
+    grid-template-columns: "left right" 1fr 1fr;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(12px, 1.5vw, 20px);
+    font-weight: bold;
+}
 </style>
 </head>
 <body>
-    <!-- <h3 style="margin-right": 10vw;">Arlington Va</h3>
-    <h3>570-418-5199</h3> -->
     <form action="https://httpbin.org/post" method="POST" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 3vh; color: black;">
         <div id="first-last" style="display: flex; flex-direction: row; gap: 10px; justify-content: center; height: 3vh; margin-bottom: 20px; width: clamp(300px, 80vw, 800px); margin-left: auto; margin-right: auto; font-size: clamp(10px, 1.5vw, 20px); font-weight: bold;">
             <label for="first-name" style="text-wrap-style: nowrap;">First<span style="color: red;">*</span></label><br>
@@ -28,11 +35,28 @@ body {
             <label for="email">Email<span style="color: red;">*</span></label><br>
             <input type="email" id="email" name="email" required><br><br>
             <label for="subject">Subject<span style="color: red;">*</span></label><br>
-            <input type="text" id="subject" name="subject" required><br><br>
+            <select id="subject" name="subject" required>
+                <option value="lawnmowing">🌱 Lawn Mowing</div>
+                <option value="yardcleanups">🍂 Yard Cleanups</div>
+                <option value="mulchinstallation">🌿 Mulch Installation</div>
+                <option value="weeding">🧹 Weeding</div>
+                <option value="bushhedge">✂️ Bush & Hedge Trimming</div>
+                <option value="edging">📏 Edging</div>
+                <option value="brushlightclearing">🌳 Brush & Light Clearing</div>
+                <option value="snowremoval">❄️ Snow Removal</div>
+                <option value="drivewayclearing">🏠 Driveway Clearing</div>
+                <option value="sidewalkshoveling">🚶 Sidewalk Shoveling</div>
+                <option value="icecontrol">🧂 Ice Control & Salting</div>
+                <option value="other">Other</option>
+            </select>
         </div>
         <label for="message">Leave me a message:</label><br>
         <textarea id="message" name="message" rows="4" style="width: 50vw; height: 30vh;" required></textarea><br><br>
         <input type="submit" value="Send Message" style="margin-bottom: 20px;">
     </form>
+    <div id="location">
+        <span style="margin-right: 20vw; grid-area: left">&#128205 Arlington, VA</span>
+        <span style="margin-left: 20vw; grid-area: right;">&#128222 570-418-5199</span>
+    </div>
 </body>
 </html>
