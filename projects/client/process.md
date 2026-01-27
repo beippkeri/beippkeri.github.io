@@ -1,5 +1,5 @@
 Goal:
-Make side-sites to index.html
+Make side-sites to index.html (chris my sites are about.html, gallery.html, and contact.html)
 Get the contact page to work
 
 Getting the contact page to work was past my abilities, as I don't know how to use PHP
