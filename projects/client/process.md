@@ -13,3 +13,13 @@ ME - What should I change?
 CL - You should improve semantics.
 Modification 1 - Improve Semantics
 semantics improved
+
+Modification 2 Dialogue
+ME - Do you think the gallery page looks a little dry
+CL - Yeah
+ME - Should I spice it up a bit
+CL - Yes
+Modification 2 - Spice up the gallery
+spiced up the gallery
+
+Modification 3
