@@ -29,3 +29,6 @@ CL - Yeah, but they do look very similar, you should place links there
 ME - Ok
 Modification 3 - Change the index.html page and have it link to the other pages
 links done and index page cleaned up, information not cluttered
+
+Wasn't very accessible, so was made accessible by changing colors and naming images
+Client likes the site :)
