@@ -27,3 +27,4 @@ ME - Do you like the side pages, or do they look to similar to the original ones
 CL - Yeah, but they do look very similar, you should place links there
 ME - Ok
 Modification 3 - Change the index.html page and have it link to the other pages
+links done and index page cleaned up, information not cluttered
