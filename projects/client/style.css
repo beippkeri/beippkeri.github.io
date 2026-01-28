@@ -1,4 +1,4 @@
-.gallery {
+.gallery { /* i LOVE css grid (i think i used it too much) */
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -26,7 +26,7 @@
         "set1 set2 set3 set4" 1fr
         / 1fr 1fr 1fr 1fr;
 }
-#gallery-footer-set1{
+#gallery-footer-set1{ /* set all the columns of links */
     grid-area: set1;
 }
 #gallery-footer-set2{
@@ -70,7 +70,7 @@
         "set1 set2 set3 set4" 1fr
         / 1fr 1fr 1fr 1fr;
 }
-#about-footer-set1{
+#about-footer-set1{ /* same as above comment */
     grid-area: set1;
 }
 #about-footer-set2{
