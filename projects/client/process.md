@@ -32,3 +32,6 @@ links done and index page cleaned up, information not cluttered
 
 Wasn't very accessible, so was made accessible by changing colors and naming images
 Client likes the site :)
+
+Modification 4 (Feb 3) - Client wanted me to make the forms work
+Used a free emailer
