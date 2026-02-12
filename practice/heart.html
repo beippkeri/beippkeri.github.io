@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hart</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>heart</h1>  
+    <canvas id="canvas" width="500" height="500">
+    </canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // draw a green rectangle
+        ctx.fillStyle = 'red';
+        ctx.beginPath();
+        ctx.arc(200, 250, 50, 0, Math.PI, true);
+        ctx.arc(300, 250, 50, 0, Math.PI, true);
+        ctx.moveTo(150, 250);
+        ctx.lineTo(250, 400);
+        ctx.lineTo(350, 250);
+        ctx.fill();
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 5;
+        ctx.stroke();
+    </script>
+</body> 
+</html>

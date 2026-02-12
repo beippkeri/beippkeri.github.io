@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas last man standing</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>wanna see sum col</h1>  
+    <canvas id="canvas" width="800" height="800">
+    </canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // draw a green rectangle
+        ctx.fillStyle = 'green';
+        ctx.fillRect(100,100,200,300, fill = 'red');
+        ctx.fillStyle = 'red';
+        ctx.beginPath();
+        ctx.arc(200, 250, 50, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillRect(350,75,100,100)
+    </script>
+</body> 
+</html>

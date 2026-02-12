@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portrait</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            background-image: url('portrait.jpg');
+            background-size: cover;
+        }
+    </style>
+    <script> //CHRIS REMIND ME TO GET RID OF THIS
+    const box = document.createElement('div');
+    box.style.position = 'fixed';
+    box.style.padding = '5px 10px';
+    box.style.background = 'rgba(0, 0, 0, 0.8)';
+    box.style.color = 'white';
+    box.style.fontSize = '12px';
+    box.style.borderRadius = '5px';
+    box.style.pointerEvents = 'none'; // click interference gone
+    box.style.zIndex = '9999';
+    document.body.appendChild(box);
+
+    // update position
+    document.addEventListener('mousemove', (e) => {
+        box.style.left = (e.clientX + 15) + 'px';
+        box.style.top = (e.clientY + 15) + 'px';
+        box.textContent = `X: ${e.clientX}, Y: ${e.clientY}`;
+    });
+    </script>
+</head>
+<body>
+    <h1>Portrait</h1>  
+    <canvas id="canvas" width="750" height="500"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');    
+
+        //face
+        ctx.beginPath();
+    </script>
+</html>
