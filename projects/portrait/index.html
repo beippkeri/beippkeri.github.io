@@ -34,10 +34,10 @@
         ctx.lineTo(540,270);
         ctx.stroke();
         
-        //mouth
+        //mouth 
         ctx.strokeStyle = 'green'
         ctx.beginPath();
-        ctx.bezierCurveTo(400, 370, 425, 335, 445, 352);
+        ctx.bezierCurveTo(400, 370, 425, 335, 445, 352); //i just discovered these
         ctx.bezierCurveTo(445, 352, 465, 335, 490, 370);
         ctx.bezierCurveTo(490, 370, 465, 405, 445, 395);
         ctx.bezierCurveTo(445, 395, 425, 405, 400, 370);
@@ -47,42 +47,46 @@
         //nose
         ctx.strokeStyle = 'yellow'
         ctx.beginPath();
-        ctx.bezierCurveTo(410,325, 425, 315, 450,325);
+        ctx.bezierCurveTo(410,325, 425, 315, 450,325); //I LOVE BEZIER CURVES
         ctx.bezierCurveTo(450,325, 475, 315, 485,325);
         ctx.bezierCurveTo(485,325, 485, 350, 450,335);
         ctx.bezierCurveTo(450,335, 415, 350, 410,325);
         ctx.lineTo(445, 270);
         ctx.lineTo(485,325);
         ctx.moveTo(445,270);
-        ctx.moveTo(450,325)
+        ctx.moveTo(450,325);
         ctx.lineTo(450,335);
-        ctx.moveTo(450,325)
-        ctx.bezierCurveTo(450,325, 470, 305, 450, 300)
+        ctx.moveTo(450,325);
+        ctx.bezierCurveTo(450,325, 470, 305, 450, 300);
         ctx.stroke();
 
         //eyes
         ctx.strokeStyle = 'purple'
         ctx.beginPath();
         //left
-        ctx.bezierCurveTo(380,285, 404, 300, 428, 285)
-        ctx.bezierCurveTo(428,285, 404, 270, 380, 285)
-        ctx.moveTo(404,290)
-        ctx.arc(404,285, 7, 0, Math.PI*2)
+        ctx.bezierCurveTo(380,285, 404, 300, 428, 285); // MORE MORE MORE
+        ctx.bezierCurveTo(428,285, 404, 270, 380, 285);
+        ctx.moveTo(404,290);
+        ctx.arc(404,285, 7, 0, Math.PI*2);
         //right
         ctx.moveTo(470,285)
-        ctx.bezierCurveTo(470,285, 494, 310, 518, 287)
-        ctx.bezierCurveTo(518,287, 494, 270, 470, 285)
-        ctx.moveTo(501,290)
-        ctx.arc(494,286, 7, 0, Math.PI*2)
+        ctx.bezierCurveTo(470,285, 494, 310, 518, 287);
+        ctx.bezierCurveTo(518,287, 494, 270, 470, 285);
+        ctx.moveTo(501,290);
+        ctx.arc(494,286, 7, 0, Math.PI*2);
         ctx.stroke();
         //eyebrows
         ctx.beginPath();
-        ctx.strokeStyle = 'white'
+        ctx.strokeStyle = 'white';
         //left
-        ctx.bezierCurveTo(370,260, 395,230, 420,260)
+        ctx.bezierCurveTo(370,260, 395,230, 420,260);
         //right
         ctx.moveTo(470,260);
-        ctx.bezierCurveTo(470,260, 495,230, 520,260)
+        ctx.bezierCurveTo(470,260, 495,230, 520,260);
         ctx.stroke();
+
+        //ears (trying to use rectangles)
+        ctx.beginPath();
+        ctx.strokeRect(360, 290, 40, 50);
     </script>
 </html>
