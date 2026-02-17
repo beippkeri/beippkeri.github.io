@@ -20,13 +20,26 @@
         const ctx = canvas.getContext('2d');    
 
         //face
-        ctx.StrokeStyle = 'white'
+        ctx.strokeStyle = 'red'
         ctx.fillStyle = 'yellow'
         ctx.beginPath();
-        ctx.arc(450, 270, 90, 0, Math.PI, true)
-        ctx.lineTo(369, 370)
-        ctx.lineTo(403, 420)
-        ctx.arc(443, 370, 70, 0, Math.PI, false)
-        ctx.stroke()
+        ctx.arc(450, 270, 90, 0, Math.PI, true);
+        ctx.lineTo(369, 370);
+        ctx.lineTo(403, 420);
+        ctx.lineTo(428, 435);
+        ctx.lineTo(480,435);
+        ctx.lineTo(505,420);
+        ctx.lineTo(530,390);
+        ctx.lineTo(535,370);
+        ctx.lineTo(540,270);
+        ctx.stroke();
+        
+        //mouth
+        ctx.strokeStyle = 'green'
+        ctx.beginPath();
+        ctx.bezierCurveTo(400, 370, 425, 335, 445, 352);
+        ctx.bezierCurveTo(445, 352, 465, 335, 490, 370);
+        ctx.bezierCurveTo(400, 370, 425, 335, 445, 352);
+        ctx.stroke();
     </script>
 </html>
