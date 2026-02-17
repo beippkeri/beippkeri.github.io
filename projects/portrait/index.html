@@ -21,7 +21,7 @@
 
         //face
         ctx.strokeStyle = 'red'
-        ctx.fillStyle = 'yellow'
+        ctx.fillStyle = 'darkbrown'
         ctx.beginPath();
         ctx.arc(450, 270, 90, 0, Math.PI, true);
         ctx.lineTo(369, 370);
@@ -39,7 +39,9 @@
         ctx.beginPath();
         ctx.bezierCurveTo(400, 370, 425, 335, 445, 352);
         ctx.bezierCurveTo(445, 352, 465, 335, 490, 370);
-        ctx.bezierCurveTo(490, 370, 425, 405, 445, 388);
+        ctx.bezierCurveTo(490, 370, 465, 405, 445, 395);
+        ctx.bezierCurveTo(445, 395, 425, 405, 400, 370);
+        ctx.bezierCurveTo(400,370, 445, 370, 490, 370)
         ctx.stroke();
     </script>
 </html>
