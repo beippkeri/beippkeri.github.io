@@ -90,5 +90,16 @@
         ctx.fillRect(350, 275, 14, 65);
         ctx.fillRect(535, 275, 14, 65);
         ctx.stroke()
+
+        //hair 
+        ctx.fillStyle = 'black'
+        ctx.beginPath();
+        ctx.bezierCurveTo(357, 200, 300, 125, 470, 140);
+        ctx.bezierCurveTo(470,140, 580, 115, 542, 200)
+        ctx.lineTo(508,200)
+        ctx.bezierCurveTo(508,200, 470, 150, 390, 200)
+        ctx.lineTo(357,200)
+        ctx.stroke();
+        ctx.fill();
     </script>
 </html>
