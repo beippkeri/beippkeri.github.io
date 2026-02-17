@@ -60,6 +60,20 @@
         ctx.bezierCurveTo(450,325, 470, 305, 450, 300)
         ctx.stroke();
 
-        
+        //eyes
+        //left
+        ctx.strokeStyle = 'purple'
+        ctx.beginPath();
+        ctx.bezierCurveTo(380,285, 404, 300, 428, 285)
+        ctx.bezierCurveTo(428,285, 404, 270, 380, 285)
+        ctx.moveTo(404,290)
+        ctx.arc(404,285, 7, 0, Math.PI*2)
+        //right
+        ctx.moveTo(470,285)
+        ctx.bezierCurveTo(470,285, 494, 310, 518, 287)
+        ctx.bezierCurveTo(518,287, 494, 270, 470, 285)
+        ctx.moveTo(501,290)
+        ctx.arc(494,286, 7, 0, Math.PI*2)
+        ctx.stroke();
     </script>
 </html>
