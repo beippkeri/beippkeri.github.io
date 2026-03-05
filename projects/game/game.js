@@ -24,14 +24,13 @@ function cloudGate() {
     
     function processInput(input){
         if (input.toLowerCase() === "cloudtown") {
-            locationB();
+            cloudTown();
         } else if (input[0] === ".") {
             // Handle help command
             if (input.toLowerCase() === ".help") {
-                print("Available commands:\n"
-                    + "Type an entire option to trigger a location change!\n"
-                    + "\t.help - Show this help message");
-                    + "\t.warp <location> - Warp to a specific location (must unlock)"
+                helpCommand();
+            } else {
+                stayHere();
             }
         } else {
             stayHere();
@@ -46,12 +45,19 @@ function cloudTown() {
     clear();
     print("\nYou have entered the Cloud Town!");
     print("\nWhere do you want to go next?"
-         + "\n\tcloudGate"
+         + "\n\tCloudGate"
     );
     
     function processInput(input){
         if (input.toLowerCase() === "cloudgate") {
             cloudGate();
+        } else if (input[0] === ".") {
+            // Handle help command
+            if (input.toLowerCase() === ".help") {
+                helpCommand();
+            } else {
+                stayHere();
+            }
         } else {
             stayHere();
             waitThenCall(cloudTown);
@@ -67,7 +73,7 @@ function start(){
     print("Welcome to my game! Press any key to start");
 
     function processInput(input){
-            start();
+            cloudGate();
     }
     waitForInput(processInput);
 }
