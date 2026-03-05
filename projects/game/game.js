@@ -7,10 +7,11 @@ let currentLocation = null;
 
 //If you need, add any "helper" functions here
 function helpCommand() {
-    print("Available commands:\n"
-        + "Type an entire option to trigger a location change!\n"
-        + "\t.help - Show this help message");
-        + "\t.warp <location> - Warp to a specific location (must unlock)"
+    print("Available commands:"
+        + "\n\tType an option to trigger a location change"
+        + "\n\t.help - Show this help message"
+        + "\n\t.warp <location> - Warp to a specific location (must unlock)"
+    );
 }
 
 //Make one function for each location
