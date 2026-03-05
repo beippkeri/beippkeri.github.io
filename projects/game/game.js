@@ -62,6 +62,14 @@ function cloudTown() {
     function processInput(input){
         if (input.toLowerCase() === "cloudgate") {
             cloudGate();
+        } else if (input.toLowerCase() === "cloudtowneast") {
+            cloudTownEast();
+        } else if (input.toLowerCase() === "cloudtownwest") {
+            cloudTownWest();
+        } else if (input.toLowerCase() === "cloudtownsouth") {
+            cloudTownSouth();
+        } else if (input.toLowerCase() === "cloudtownsquare") {
+            cloudTownSquare();
         } else if (input[0] === ".") {
             // Handle help command
             if (input.toLowerCase() === ".help") {
