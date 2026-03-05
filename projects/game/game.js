@@ -117,11 +117,12 @@ function cloudTownEast() {
     print("\nYou have moved to the East side of Cloud Town!");
     print("\nWhere do you want to go next?"
         + "\n\tCloudTown"
+        + "\n\tLibrary"
     );
     
     function processInput(input){
-        if (input.toLowerCase() === "cloudgate") {
-            cloudGate();
+        if (input.toLowerCase() === "cloudtown") {
+            cloudTown();
         } else if (input[0] === ".") {
             // Handle help command
             if (input.toLowerCase() === ".help") {
@@ -137,12 +138,11 @@ function cloudTownEast() {
     waitForInput(processInput);
 }
 function cloudTownWest() {
-    currentLocation = "cloudTownEast";
+    currentLocation = "cloudTownWest";
     clear();
-    print("\nYou have moved to the east side of Cloud Town!");
+    print("\nYou have moved to the west side of Cloud Town!");
     print("\nWhere do you want to go next?"
         + "\n\tCloudTown"
-        + "\n\tLibrary"
     );
     
     function processInput(input){
