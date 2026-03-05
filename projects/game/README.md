@@ -9,6 +9,7 @@ Cloud Town:
     Cloud Town South
     City Center
     Cloud Gate
+    Cloud Castle*
 Cloud Town West:
     Store
     New Home*

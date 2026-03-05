@@ -11,6 +11,12 @@ function helpCommand() {
         + "\n\tType an option to trigger a location change"
         + "\n\t.help - Show this help message"
         + "\n\t.warp <location> - Warp to a specific location (must unlock)"
+        + "\nGame Info:"
+        + "\n\tThis is a simple text-based adventure game. Your goal is to explore the world and find hidden secrets. Each location may have different options for you to choose from. Type the name of the location you want to go to, and press Enter. Good luck!"
+        + "\n\tNote: This is a work in progress, so there may be some bugs or unfinished content. If you find any issues, please let me know!"
+        + "\n\tAlso, feel free to customize the game and make it your own! You can add new locations, items, or even a storyline. The code is open for you to edit and have fun with!"
+        + "\n\tRemember, the most important thing is to have fun and be creative! Happy gaming!"
+        + "\n\tIf you ever finish interacting with npcs, check the locations for new options. You never know what you might find!"
     );
 }
 
@@ -47,6 +53,7 @@ function cloudTown() {
     print("\nYou have entered the Cloud Town!");
     print("\nWhere do you want to go next?"
          + "\n\tCloudGate"
+         + "\n\tCloudCastle (locked)"
     );
     
     function processInput(input){
