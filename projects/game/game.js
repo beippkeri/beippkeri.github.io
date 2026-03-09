@@ -21,7 +21,7 @@ function tutorialGuyDialogue() {
     function processInput(input){
         if ((input.toLowerCase() === "yes") || (input.toLowerCase() === "y")) {
             tutorialDialogue();
-            setTimeout((cloudTown, 20000));
+            waitThenCallLong(cloudTown);
             let tutorial = true;
         } else if ((input.toLowerCase() === "no") || (input.toLowerCase() === "n")) {
             print("\nTutorial Guy: No problem! If you ever need any help or want to see the tutorial, just let me know. I'm here to assist you in any way I can!");
@@ -43,7 +43,7 @@ function tutorialGuyDialogue() {
 }
 function tutorialDialogue() {
     print("\nTutorial Guy: Use the commands to navigate through the game and interact with the world. You can type the name of a location to move there, or talk to NPCs to learn more about the game and get tips. Don't forget to check your inventory and use items you find along the way!");
-    print("If you ever need help, just type .help to see a list of available commands and information about the game. Good luck, and have fun exploring! (this is 20 seconds long)");
+    print("If you ever need help, just type .help to see a list of available commands and information about the game. Good luck, and have fun exploring! (this is 15 seconds long)");
 }
 //Commands and other helper functions
 function helpCommand() {

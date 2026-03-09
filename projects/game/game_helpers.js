@@ -59,7 +59,7 @@ function waitThenCall(target){
     setTimeout(target,2000);
 }
 function waitThenCallLong(target){
-    setTimeout(target,10000);
+    setTimeout(target,15000);
 }
 
 function stayHere(){
