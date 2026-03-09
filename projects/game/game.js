@@ -451,24 +451,6 @@ function store() {
     }
     waitForInput(processInput);
 }
-                inventoryTools.push("Rusty Pickaxe");
-            } else {
-                print("You don't have enough clokens to buy the Rusty Pickaxe!");
-            else if (input.toLowerCase() === "rusty pickaxe") {
-            if (clokens >= 50) {
-                print("You have purchased the Rusty Pickaxe!");
-                clokens -= 50;
-                inventoryTools.push("Rusty Pickaxe");
-            } else {
-                print("You don't have enough clokens to buy the Rusty Pickaxe!");
-            }
-        } else {
-            stayHere();
-            waitThenCall(store);
-        }
-    }
-    waitForInput(processInput);
-}
 //finally, make sure you customize this to tell it what should happen at the
 //very start. For this simple example, any input will bring you
 //to locationA
