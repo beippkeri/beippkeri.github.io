@@ -6,6 +6,10 @@ let warpUnlocked = false;
 let currentLocation = null;
 let tutorial = false;
 let clokens = 0;
+let inventoryTools = [];
+let inventoryConsumables = [];
+let inventoryEquipment = [];
+let quests = [];
 //Dialogues 
 function librarianDialogue() {
     print("\nLibrarian: Hello there! Welcome to the library. We have a wide selection of books on various topics. Is there anything specific you're looking for?");

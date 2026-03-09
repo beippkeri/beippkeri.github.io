@@ -36,6 +36,8 @@ Library:
     Librarian
 Gym:
     Receptionist
+Store: 
+    Clerk
 
 current name: Cloud World
 This game is set in some sort of "cloud world" which is a sequel to one my friend's other game.
@@ -47,3 +49,13 @@ warpUnlocked - unlocks warps; makes transportation faster
 currentLocation - stores the player's location
 tutorial - have they been through the tutorial?
 Clokens - the currency
+inventorytools - tools inventory
+inventoryequipment - equipment inventory
+inventory consumables - consumable inventory
+quests - list of quests
+
+quests (mostly mining):
+mine 25 stone
+mine 25 coal
+mine 50 iron
+mine 100 rubies
