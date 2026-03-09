@@ -33,6 +33,7 @@ City Center:
 Cloud Town:
     Tutorial Guy
 
+current name: Cloud World
 This game is set in some sort of "cloud world" which is a sequel to one my friend's other game.
 You have just approached a gate to a cloud world, to escape, you have to beat the evil controlling them.
 
