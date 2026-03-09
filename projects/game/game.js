@@ -6,6 +6,7 @@ let warpUnlocked = false;
 let currentLocation = null;
 let tutorial = false;
 let clokens = 0;
+let talkedtoclerk = false;
 let inventoryTools = [];
 let inventoryConsumables = [];
 let inventoryEquipment = [];
@@ -19,6 +20,13 @@ function receptionistDialogue() {
     print("\nReceptionist: Hi! Welcome to the gym. We have a variety of equipment and classes available.");
     print("In this place, you can work out and get stronger! If you want to rest here, you can!");
     print("If you want to buy a membership, you can!");
+}
+function clerkDialogue() {
+    print("\nClerk: Welcome to the store! We have a variety of items for sale, including pickaxes, potions, and more. Is there anything specific you're looking for?");
+    print("If you want to rest here, you can!");
+    print("If you want to buy something, just let me know!");
+    print("If you want to buy a pickaxe, just let me know which one you want! I recommend you buy one if you want to mine for clokens, which is the currency of this world. You can use clokens to buy better pickaxes and other items that will help you on your adventure!");
+    let talkedtoclerk = true;
 }
 function tutorialGuyDialogue() {
     print("\nTutorial Guy: Hi there! I'm the tutorial guy. I'm here to help you get started with the game and give you tips on how to play. If you have any questions or need any guidance, feel free to ask me!");
@@ -252,7 +260,6 @@ function cloudTownSquare() {
         + "\n\tCloudTown"
         + "\n\tCraftingShop"
         + "\n\tWarp Zone"
-        + "\n\tBank"
     );
     
     function processInput(input){
@@ -337,7 +344,47 @@ function cloudTownGym() {
 }
 
 //West Side Locations
-
+function store() {
+    currentLocation = "store";
+    clear();
+    print("\nYou have entered the store of Cloud Town!");
+    print("\nWhere do you want to go next?"
+        + "\n\tCloudTown"
+    );
+    print("\nWho do you want to talk to?"
+        + "\n\tClerk"
+    );
+    print("\nWhat do you want to buy?"
+        + "\n\tPickaxes:"
+        + "\n\tRusty Pickaxe (50 clokens)"
+        + "\n\tShiny Pickaxe (200 clokens)"
+        + "\n\tMythical Pickaxe (1,000 clokens)"
+        + "\n\tRuby Pickaxe (12,500 clokens)"
+        + "\n\tDiamond Pickaxe (50,000 clokens)"
+        + "\n\tObsidian Pickaxe (100,000 clokens)"
+        + "\n\tRainbow Pickaxe (1,000,000 clokens)"
+        + "\n\tCLOUD GOD PICKAXE (1,000,000,000 clokens)"
+    );
+    
+    function processInput(input){
+        if (input.toLowerCase() === "cloudtown") {
+            cloudTown();
+        } else if (input.toLowerCase() === "clerk") {
+            clerkDialogue();
+        } else if (input[0] === ".") {
+            // Handle help command
+            if (input.toLowerCase() === ".help") {
+                helpCommand();
+            } else {
+                stayHere();
+            }
+        } else {
+            stayHere();
+            waitThenCall(store);
+        }
+    }
+    waitForInput(processInput);
+}
 //finally, make sure you customize this to tell it what should happen at the
 //very start. For this simple example, any input will bring you
 //to locationA

@@ -2,34 +2,37 @@ Locations:
 *needs to be unlocked
 Cloud Gate: 
     Cloud Town
-    Back down*
+    Back down* after cloud castle
 Cloud Town:
     Cloud Town West
     Cloud Town East
     Cloud Town South
     City Center
     Cloud Gate
-    Cloud Castle*
+    Cloud Castle* finale (after base camp)
 Cloud Town West:
     Store
     New Home*
-    Cloudy Forest*
+    Cloudy Forest* mobs
     Cloud Town
 Cloud Town East:
-    Chris's house*
-    Jeff's house*
+    Chris's house* 25 stone quest
+    Jeff's house* 25 stone quest
     Library
     Cloud Town
 Cloud Town South
-    Fake Island*
-    The Mine*
+    The Mine* talk to clerk
     The Gym
 City Center:
     Warp Zone
     Crafting Area
+Cloud forest:
+Cloud Dungeon* (after forest)
+Cloud Base Camp Portal* (after dungeon)
+
 People:
 City Center:
-    Quest Guy*
+    Quest Guy* tutorial and talk to clerk
 Cloud Town:
     Tutorial Guy
 Library:
@@ -38,10 +41,12 @@ Gym:
     Receptionist
 Store: 
     Clerk
-
+Cloud Forest:
+    Cloud Eye
 current name: Cloud World
 This game is set in some sort of "cloud world" which is a sequel to one my friend's other game.
 You have just approached a gate to a cloud world, to escape, you have to beat the evil controlling them.
+Simple game similar to terminus
 
 variables:
 
