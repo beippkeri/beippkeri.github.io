@@ -4,7 +4,7 @@ let gameActive = true; //this variable is required.
 //config
 let warpUnlocked = false;
 let currentLocation = null;
-
+let tutorial = false;
 //Dialogues 
 function librarianDialogue() {
     print("\nLibrarian: Hello there! Welcome to the library. We have a wide selection of books on various topics. Is there anything specific you're looking for?");
@@ -14,6 +14,33 @@ function receptionistDialogue() {
     print("\nReceptionist: Hi! Welcome to the gym. We have a variety of equipment and classes available.");
     print("In this place, you can work out and get stronger! If you want to rest here, you can!");
     print("If you want to buy a membership, you can!");
+}
+function tutorialGuyDialogue() {
+    print("\nTutorial Guy: Hi there! I'm the tutorial guy. I'm here to help you get started with the game and give you tips on how to play. If you have any questions or need any guidance, feel free to ask me!");
+    print("Do you need to see the tutorial?")
+    function processInput(input){
+        if (input.toLowerCase() === "yes") {
+            tutorialDialogue();
+        } else if (input.toLowerCase() === "no") {
+            print("\nTutorial Guy: No problem! If you ever need any help or want to see the tutorial, just let me know. I'm here to assist you in any way I can!");
+            let tutorial = true;
+        } else if (input[0] === ".") {
+            // Handle help command
+            if (input.toLowerCase() === ".help") {
+                helpCommand();
+            } else {
+                stayHere();
+            }
+        } else {
+            stayHere();
+            waitThenCall(tutorialGuyDialogue);
+        }
+    }
+    waitForInput(processInput);
+}
+function tutorialDialogue() {
+    print("\nTutorial Guy: Hello there! I'm here to help you get started with the game. If you have any questions or need any guidance, feel free to ask me!");
+    print("I can also give you some tips on how to play the game and find hidden secrets. Just let me know what you need help with!");
 }
 //Commands and other helper functions
 function helpCommand() {
@@ -68,6 +95,9 @@ function cloudTown() {
         + "\n\tCloudTownSouth"
         + "\n\tCloudTownSquare"
     );
+    print("\nWho do you want to talk to?"
+        + "\n\tTutorialGuy (He is here to help you get started and give you tips on how to play the game. Feel free to talk to him if you need any assistance or guidance!)"
+    );
     
     function processInput(input){
         if (input.toLowerCase() === "cloudgate") {
@@ -80,6 +110,8 @@ function cloudTown() {
             cloudTownSouth();
         } else if (input.toLowerCase() === "cloudtownsquare") {
             cloudTownSquare();
+        }else if (input.toLowerCase() === "tutorialguy") {
+            tutorialGuyDialogue();
         } else if (input[0] === ".") {
             // Handle help command
             if (input.toLowerCase() === ".help") {
