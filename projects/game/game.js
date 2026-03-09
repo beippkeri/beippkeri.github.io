@@ -5,6 +5,7 @@ let gameActive = true; //this variable is required.
 let warpUnlocked = false;
 let currentLocation = null;
 let tutorial = false;
+let clokens = 0;
 //Dialogues 
 function librarianDialogue() {
     print("\nLibrarian: Hello there! Welcome to the library. We have a wide selection of books on various topics. Is there anything specific you're looking for?");
@@ -23,9 +24,11 @@ function tutorialGuyDialogue() {
             tutorialDialogue();
             waitThenCallLong(cloudTown);
             let tutorial = true;
+            clokens += 100;
         } else if ((input.toLowerCase() === "no") || (input.toLowerCase() === "n")) {
-            print("\nTutorial Guy: No problem! If you ever need any help or want to see the tutorial, just let me know. I'm here to assist you in any way I can!");
+            print("\nTutorial Guy: No problem! If you ever need any help or want to see the tutorial, just let me know. I'm here to assist you in any way I can! Here is 100 clokens to start with!");
             let tutorial = true;
+            clokens += 100;
             print("You might want to check the locations for new options. You never know what you might find!");
         } else if (input[0] === ".") {
             // Handle help command
@@ -43,7 +46,7 @@ function tutorialGuyDialogue() {
 }
 function tutorialDialogue() {
     print("\nTutorial Guy: Use the commands to navigate through the game and interact with the world. You can type the name of a location to move there, or talk to NPCs to learn more about the game and get tips. Don't forget to check your inventory and use items you find along the way!");
-    print("If you ever need help, just type .help to see a list of available commands and information about the game. Good luck, and have fun exploring! (this is 15 seconds long)");
+    print("If you ever need help, just type .help to see a list of available commands and information about the game. Good luck, and have fun exploring! Here's 100 clokens to start! (this is 15 seconds long)");
 }
 //Commands and other helper functions
 function helpCommand() {
@@ -330,6 +333,7 @@ function cloudTownGym() {
 }
 
 //West Side Locations
+
 //finally, make sure you customize this to tell it what should happen at the
 //very start. For this simple example, any input will bring you
 //to locationA

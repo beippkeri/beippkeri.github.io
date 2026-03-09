@@ -46,4 +46,4 @@ variables:
 warpUnlocked - unlocks warps; makes transportation faster
 currentLocation - stores the player's location
 tutorial - have they been through the tutorial?
-
+Clokens - the currency
