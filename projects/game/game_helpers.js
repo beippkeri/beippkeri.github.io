@@ -56,7 +56,7 @@ function waitForInput(handlerFunction){
 }
 
 function waitThenCall(target){
-    setTimeout(target,2000);
+    setTimeout(target,1000);
 }
 function waitThenCallLong(target){
     setTimeout(target,15000);
