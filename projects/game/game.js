@@ -5,10 +5,15 @@ let gameActive = true; //this variable is required.
 let warpUnlocked = false;
 let currentLocation = null;
 
+//Dialogues 
+function librarianDialogue() {
+    print("\nLibrarian: Hello there! Welcome to the library. We have a wide selection of books on various topics. Is there anything specific you're looking for?");
+    print("If you want to rest here, you can!");
+}
 //Commands and other helper functions
 function helpCommand() {
     print("Available commands:"
-        + "\n\tType an option to trigger a location change"
+        + "\n\tType an option to trigger the corresponding action or move to a new location."
         + "\n\t.help - Show this help message"
         + "\n\t.warp <location> - Warp to a specific location (must unlock)"
         + "\nGame Info:"
@@ -212,6 +217,37 @@ function cloudTownSquare() {
         } else {
             stayHere();
             waitThenCall(cloudTownWest);
+        }
+    }
+    waitForInput(processInput);
+}
+// Adding more locations and their corresponding functions
+function cloudTownLibrary() {
+    currentLocation = "cloudTownLibrary";
+    clear();
+    print("\nYou have entered the library of Cloud Town!");
+    print("\nWhere do you want to go next?"
+        + "\n\tCloudTown"
+    );
+    print("\nWho do you want to talk to?"
+        + "\n\tLibrarian"
+    );
+    
+    function processInput(input){
+        if (input.toLowerCase() === "cloudtown") {
+            cloudTown();
+        } else if (input.toLowerCase() === "librarian") {
+            librarianDialogue();
+        } else if (input[0] === ".") {
+            // Handle help command
+            if (input.toLowerCase() === ".help") {
+                helpCommand();
+            } else {
+                stayHere();
+            }
+        } else {
+            stayHere();
+            waitThenCall(cloudTownLibrary);
         }
     }
     waitForInput(processInput);
