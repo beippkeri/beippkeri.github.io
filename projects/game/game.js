@@ -224,11 +224,14 @@ function cloudTownWest() {
     print("\nYou have moved to the west side of Cloud Town!");
     print("\nWhere do you want to go next?"
         + "\n\tCloudTown"
+        + "\n\tStore"
     );
     
     function processInput(input){
         if (input.toLowerCase() === "cloudtown") {
             cloudTown();
+        } else if (input.toLowerCase() === "store") {
+            store(); 
         } else if (input[0] === ".") {
             // Handle help command
             if (input.toLowerCase() === ".help") {
