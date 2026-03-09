@@ -186,6 +186,8 @@ function cloudTownSouth() {
     function processInput(input){
         if (input.toLowerCase() === "cloudtown") {
             cloudTown();
+        } else if (input.toLowerCase() === "gym") {
+            cloudTownGym();
         } else if (input[0] === ".") {
             // Handle help command
             if (input.toLowerCase() === ".help") {
