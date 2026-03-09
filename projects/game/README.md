@@ -33,5 +33,12 @@ City Center:
 Cloud Town:
     Tutorial Guy
 
+This game is set in some sort of "cloud world" which is a sequel to one my friend's other game.
+You have just approached a gate to a cloud world, to escape, you have to beat the evil controlling them.
+
+variables:
+
+warpUnlocked - unlocks warps; makes transportation faster
+currentLocation - stores the player's location
 
 
