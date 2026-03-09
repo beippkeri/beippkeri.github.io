@@ -46,6 +46,8 @@ function tutorialGuyDialogue() {
             // Handle help command
             if (input.toLowerCase() === ".help") {
                 helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
             } else {
                 stayHere();
             }
@@ -100,6 +102,8 @@ function cloudGate() {
             // Handle help command
             if (input.toLowerCase() === ".help") {
                 helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
             } else {
                 stayHere();
             }
@@ -143,6 +147,8 @@ function cloudTown() {
             // Handle help command
             if (input.toLowerCase() === ".help") {
                 helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
             } else {
                 stayHere();
             }
@@ -170,6 +176,8 @@ function cloudTownWest() {
             // Handle help command
             if (input.toLowerCase() === ".help") {
                 helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
             } else {
                 stayHere();
             }
@@ -198,6 +206,8 @@ function cloudTownEast() {
             // Handle help command
             if (input.toLowerCase() === ".help") {
                 helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
             } else {
                 stayHere();
             }
@@ -223,6 +233,8 @@ function cloudTownWest() {
             // Handle help command
             if (input.toLowerCase() === ".help") {
                 helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
             } else {
                 stayHere();
             }
@@ -251,6 +263,8 @@ function cloudTownSouth() {
             // Handle help command
             if (input.toLowerCase() === ".help") {
                 helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
             } else {
                 stayHere();
             }
@@ -278,6 +292,8 @@ function cloudTownSquare() {
             // Handle help command
             if (input.toLowerCase() === ".help") {
                 helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
             } else {
                 stayHere();
             }
@@ -309,6 +325,8 @@ function cloudTownLibrary() {
             // Handle help command
             if (input.toLowerCase() === ".help") {
                 helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
             } else {
                 stayHere();
             }
@@ -341,6 +359,8 @@ function cloudTownGym() {
             // Handle help command
             if (input.toLowerCase() === ".help") {
                 helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
             } else {
                 stayHere();
             }
@@ -443,6 +463,15 @@ function store() {
                 inventoryTools.push("cloudgodpickaxe");
             } else {
                 print("You don't have enough clokens to buy the CLOUD GOD PICKAXE!");
+            }
+            }else if (input[0] === ".") {
+            // Handle help command
+            if (input.toLowerCase() === ".help") {
+                helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
+            } else {
+                stayHere();
             }
         } else {
             stayHere();
