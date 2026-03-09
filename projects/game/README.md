@@ -58,6 +58,7 @@ inventorytools - tools inventory
 inventoryequipment - equipment inventory
 inventory consumables - consumable inventory
 quests - list of quests
+talkedtoclerk - unlocks quests
 
 quests (mostly mining):
 mine 25 stone

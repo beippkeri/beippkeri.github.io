@@ -66,12 +66,21 @@ function helpCommand() {
         + "\n\tType an option to trigger the corresponding action or move to a new location."
         + "\n\t.help - Show this help message"
         + "\n\t.warp <location> - Warp to a specific location (must unlock)"
+        + "\n\t.inventory - Check your inventory"
         + "\nGame Info:"
         + "\n\tThis is a simple text-based adventure game. Your goal is to explore the world and find hidden secrets. Each location may have different options for you to choose from. Type the name of the location you want to go to, and press Enter. Good luck!"
         + "\n\tNote: This is a work in progress, so there may be some bugs or unfinished content. If you find any issues, please let me know!"
         + "\n\tAlso, feel free to customize the game and make it your own! You can add new locations, items, or even a storyline. The code is open for you to edit and have fun with!"
         + "\n\tRemember, the most important thing is to have fun and be creative! Happy gaming!"
         + "\n\tIf you ever finish interacting with npcs, check the locations for new options. You never know what you might find!"
+    );
+}
+function inventoryCommand() {
+    print("Inventory:"
+        + "\n\tTools: " + inventoryTools.join(", ")
+        + "\n\tConsumables: " + inventoryConsumables.join(", ")
+        + "\n\tEquipment: " + inventoryEquipment.join(", ")
+        + "\nClokens: " + clokens
     );
 }
 
@@ -356,14 +365,14 @@ function store() {
     );
     print("\nWhat do you want to buy?"
         + "\n\tPickaxes:"
-        + "\n\tRusty Pickaxe (50 clokens)"
-        + "\n\tShiny Pickaxe (200 clokens)"
-        + "\n\tMythical Pickaxe (1,000 clokens)"
-        + "\n\tRuby Pickaxe (12,500 clokens)"
-        + "\n\tDiamond Pickaxe (50,000 clokens)"
-        + "\n\tObsidian Pickaxe (100,000 clokens)"
-        + "\n\tRainbow Pickaxe (1,000,000 clokens)"
-        + "\n\tCLOUD GOD PICKAXE (1,000,000,000 clokens)"
+        + "\n\tRustyPickaxe (50 clokens)"
+        + "\n\tShinyPickaxe (200 clokens)"
+        + "\n\tMythicalPickaxe (1,000 clokens)"
+        + "\n\tRubyPickaxe (12,500 clokens)"
+        + "\n\tDiamondPickaxe (50,000 clokens)"
+        + "\n\tObsidianPickaxe (100,000 clokens)"
+        + "\n\tRainbowPickaxe (1,000,000 clokens)"
+        + "\n\tCloudGodPickaxe (1,000,000,000 clokens)"
     );
     
     function processInput(input){
@@ -371,12 +380,87 @@ function store() {
             cloudTown();
         } else if (input.toLowerCase() === "clerk") {
             clerkDialogue();
-        } else if (input[0] === ".") {
-            // Handle help command
-            if (input.toLowerCase() === ".help") {
-                helpCommand();
+        } else if (input.toLowerCase() === "rustypickaxe") {
+            if (clokens >= 50) {
+                print("You have purchased the Rusty Pickaxe!");
+                clokens -= 50;
+                inventoryTools.push("rustypickaxe");
             } else {
-                stayHere();
+                print("You don't have enough clokens to buy the Rusty Pickaxe!");
+            }
+        } else if (input.toLowerCase() === "shinypickaxe") {
+            if (clokens >= 200) {
+                print("You have purchased the Shiny Pickaxe!");
+                clokens -= 200;
+                inventoryTools.push("shinypickaxe");
+            } else {
+                print("You don't have enough clokens to buy the Shiny Pickaxe!");
+            }
+        } else if (input.toLowerCase() === "mythicalpickaxe") {
+            if (clokens >= 1000) {
+                print("You have purchased the Mythical Pickaxe!");
+                clokens -= 1000;
+                inventoryTools.push("mythicalpickaxe");
+            } else {
+                print("You don't have enough clokens to buy the Mythical Pickaxe!");
+            }
+        } else if (input.toLowerCase() === "rubypickaxe") {
+            if (clokens >= 12500) {
+                print("You have purchased the Ruby Pickaxe!");
+                clokens -= 12500;
+                inventoryTools.push("rubypickaxe");
+            } else {
+                print("You don't have enough clokens to buy the Ruby Pickaxe!");
+            }
+        } else if (input.toLowerCase() === "diamondpickaxe") {
+            if (clokens >= 50) {
+                print("You have purchased the Rusty Pickaxe!");
+                clokens -= 50;
+                inventoryTools.push("diamondpickaxe");
+            } else {
+                print("You don't have enough clokens to buy the Diamond Pickaxe!");
+            }
+        } else if (input.toLowerCase() === "obsidianpickaxe") {
+            if (clokens >= 200) {
+                print("You have purchased the Obsidian Pickaxe!");
+                clokens -= 200;
+                inventoryTools.push("obsidianpickaxe");
+            } else {
+                print("You don't have enough clokens to buy the Obsidian Pickaxe!");
+            }
+        } else if (input.toLowerCase() === "rainbowpickaxe") {
+            if (clokens >= 1000) {
+                print("You have purchased the Rainbow Pickaxe!");
+                clokens -= 1000;
+                inventoryTools.push("rainbowpickaxe");
+            } else {
+                print("You don't have enough clokens to buy the Rainbow Pickaxe!");
+            }
+        } else if (input.toLowerCase() === "cloudgodpickaxe") {
+            if (clokens >= 12500) {
+                print("YOU HAVE BECOME ONE WITH THE CLOUDS! You have purchased the CLOUD GOD PICKAXE!");
+                clokens -= 12500;
+                inventoryTools.push("cloudgodpickaxe");
+            } else {
+                print("You don't have enough clokens to buy the CLOUD GOD PICKAXE!");
+            }
+        } else {
+            stayHere();
+            waitThenCall(store);
+        }
+    }
+    waitForInput(processInput);
+}
+                inventoryTools.push("Rusty Pickaxe");
+            } else {
+                print("You don't have enough clokens to buy the Rusty Pickaxe!");
+            else if (input.toLowerCase() === "rusty pickaxe") {
+            if (clokens >= 50) {
+                print("You have purchased the Rusty Pickaxe!");
+                clokens -= 50;
+                inventoryTools.push("Rusty Pickaxe");
+            } else {
+                print("You don't have enough clokens to buy the Rusty Pickaxe!");
             }
         } else {
             stayHere();
