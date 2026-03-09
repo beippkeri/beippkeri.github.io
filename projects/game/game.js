@@ -35,13 +35,18 @@ function tutorialGuyDialogue() {
         if ((input.toLowerCase() === "yes") || (input.toLowerCase() === "y")) {
             tutorialDialogue();
             waitThenCallLong(cloudTown);
+            if (!tutorial) {
+                clokens += 100;
+            }
             let tutorial = true;
-            clokens += 100;
         } else if ((input.toLowerCase() === "no") || (input.toLowerCase() === "n")) {
             print("\nTutorial Guy: No problem! If you ever need any help or want to see the tutorial, just let me know. I'm here to assist you in any way I can! Here is 100 clokens to start with!");
+            if (!tutorial) {
+                clokens += 100;
+            }
             let tutorial = true;
-            clokens += 100;
             print("You might want to check the locations for new options. You never know what you might find!");
+            waitThenCall(cloudTown);
         } else if (input[0] === ".") {
             // Handle help command
             if (input.toLowerCase() === ".help") {
