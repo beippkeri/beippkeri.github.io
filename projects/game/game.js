@@ -10,6 +10,11 @@ function librarianDialogue() {
     print("\nLibrarian: Hello there! Welcome to the library. We have a wide selection of books on various topics. Is there anything specific you're looking for?");
     print("If you want to rest here, you can!");
 }
+function receptionistDialogue() {
+    print("\nReceptionist: Hi! Welcome to the gym. We have a variety of equipment and classes available.");
+    print("In this place, you can work out and get stronger! If you want to rest here, you can!");
+    print("If you want to buy a membership, you can!");
+}
 //Commands and other helper functions
 function helpCommand() {
     print("Available commands:"
@@ -223,7 +228,7 @@ function cloudTownSquare() {
     }
     waitForInput(processInput);
 }
-// Adding more locations and their corresponding functions
+// Eastern locations
 function cloudTownLibrary() {
     currentLocation = "cloudTownLibrary";
     clear();
@@ -254,6 +259,40 @@ function cloudTownLibrary() {
     }
     waitForInput(processInput);
 }
+//South Side Locations
+
+function cloudTownGym() {
+    currentLocation = "cloudTownGym";
+    clear();
+    print("\nYou have entered the gym of Cloud Town!");
+    print("\nWhere do you want to go next?"
+        + "\n\tCloudTown"
+    );
+    print("\nWho do you want to talk to?"
+        + "\n\tReceptionist"
+    );
+    
+    function processInput(input){
+        if (input.toLowerCase() === "cloudtown") {
+            cloudTown();
+        } else if (input.toLowerCase() === "receptionist") {
+            receptionistDialogue();
+        } else if (input[0] === ".") {
+            // Handle help command
+            if (input.toLowerCase() === ".help") {
+                helpCommand();
+            } else {
+                stayHere();
+            }
+        } else {
+            stayHere();
+            waitThenCall(cloudTownGym);
+        }
+    }
+    waitForInput(processInput);
+}
+
+//West Side Locations
 //finally, make sure you customize this to tell it what should happen at the
 //very start. For this simple example, any input will bring you
 //to locationA
