@@ -32,6 +32,10 @@ City Center:
     Quest Guy*
 Cloud Town:
     Tutorial Guy
+Library:
+    Librarian
+Gym:
+    Receptionist
 
 current name: Cloud World
 This game is set in some sort of "cloud world" which is a sequel to one my friend's other game.
