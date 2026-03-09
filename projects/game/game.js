@@ -17,11 +17,11 @@ function receptionistDialogue() {
 }
 function tutorialGuyDialogue() {
     print("\nTutorial Guy: Hi there! I'm the tutorial guy. I'm here to help you get started with the game and give you tips on how to play. If you have any questions or need any guidance, feel free to ask me!");
-    print("Do you need to see the tutorial?")
+    print("Do you need to see the tutorial? (yes/no)");
     function processInput(input){
-        if (input.toLowerCase() === "yes") {
+        if ((input.toLowerCase() === "yes") || (input.toLowerCase() === "y")) {
             tutorialDialogue();
-        } else if (input.toLowerCase() === "no") {
+        } else if ((input.toLowerCase() === "no") || (input.toLowerCase() === "n")) {
             print("\nTutorial Guy: No problem! If you ever need any help or want to see the tutorial, just let me know. I'm here to assist you in any way I can!");
             let tutorial = true;
         } else if (input[0] === ".") {
