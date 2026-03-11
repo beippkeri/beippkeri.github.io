@@ -11,6 +11,9 @@ let inventoryTools = [];
 let inventoryConsumables = [];
 let inventoryEquipment = [];
 let quests = [];
+let equippedTool = "none";
+let equippedConsumable = ["none"];
+let equippedEquipment = ["bracelet", "helmet"];
 //Dialogues 
 function librarianDialogue() {
     print("\nLibrarian: Hello there! Welcome to the library. We have a wide selection of books on various topics. Is there anything specific you're looking for?");
@@ -88,8 +91,35 @@ function inventoryCommand() {
         + "\n\tConsumables: " + inventoryConsumables.join(", ")
         + "\n\tEquipment: " + inventoryEquipment.join(", ")
         + "\nClokens: " + clokens
+        + "\nEquipped Tool: " + equippedTool
+        + "\nEquipped Consumables: " + equippedConsumable.join(", ")
+        + "\nEquipped Equipment: " + equippedEquipment.join(", ")
     );
 }
+function equipCommand(type, item) {
+    if (type === "tool") {
+        if (inventoryTools.includes(item)) {
+            print("You have equipped the " + item + "!");
+            // Add logic to equip the tool and apply its effects
+
+        } else {
+            print("You don't have that tool in your inventory!");
+        }
+    } else if (type === "consumable") {
+        if (inventoryConsumables.includes(item)) {
+            print("You have used the " + item + "!");
+            // Add logic to use the consumable and apply its effects
+        } else {
+            print("You don't have that consumable in your inventory!");
+        }
+    } else if (type === "equipment") {
+        if (inventoryEquipment.includes(item)) {
+            print("You have equipped the " + item + "!");
+            // Add logic to equip the equipment and apply its effects
+        } else {
+            print("You don't have that equipment in your inventory!");
+        }
+    }
 
 //Main Areas
 function cloudGate() {
