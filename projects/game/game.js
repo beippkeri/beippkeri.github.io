@@ -12,8 +12,7 @@ let inventoryConsumables = [];
 let inventoryEquipment = [];
 let quests = [];
 let equippedTool = "none";
-let equippedConsumable = ["none"];
-let equippedEquipment = ["bracelet", "helmet"];
+let equippedHelmet = "none";
 //Dialogues 
 function librarianDialogue() {
     print("\nLibrarian: Hello there! Welcome to the library. We have a wide selection of books on various topics. Is there anything specific you're looking for?");
@@ -89,11 +88,10 @@ function inventoryCommand() {
     print("Inventory:"
         + "\n\tTools: " + inventoryTools.join(", ")
         + "\n\tConsumables: " + inventoryConsumables.join(", ")
-        + "\n\tEquipment: " + inventoryEquipment.join(", ")
+        + "\n\tHelmets: " + inventoryHelmet.join(", ")
         + "\nClokens: " + clokens
         + "\nEquipped Tool: " + equippedTool
-        + "\nEquipped Consumables: " + equippedConsumable.join(", ")
-        + "\nEquipped Equipment: " + equippedEquipment.join(", ")
+        + "\nEquipped Helmet: " + equippedHelmet
     );
 }
 function equipCommand(type, item) {
@@ -101,7 +99,7 @@ function equipCommand(type, item) {
         if (inventoryTools.includes(item)) {
             print("You have equipped the " + item + "!");
             // Add logic to equip the tool and apply its effects
-
+            equippedTool = item;
         } else {
             print("You don't have that tool in your inventory!");
         }

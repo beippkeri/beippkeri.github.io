@@ -45,7 +45,7 @@ Cloud Forest:
     Cloud Eye
 current name: Cloud World
 This game is set in some sort of "cloud world" which is a sequel to one my friend's other game.
-You have just approached a gate to a cloud world, to escape, you have to beat the evil controlling them.
+You have just approached a gate to a cloud world, to escape, you have to earn enough money to beat the evil controlling them.
 Simple game similar to terminus
 
 variables:
@@ -59,8 +59,9 @@ inventoryequipment - equipment inventory
 inventory consumables - consumable inventory
 quests - list of quests
 talkedtoclerk - unlocks quests
-
-quests (mostly mining):
+equippedhelmet - equipped helmet
+equippedtool - equipped tool
+quests (mining):
 mine 25 stone
 mine 25 coal
 mine 50 iron
