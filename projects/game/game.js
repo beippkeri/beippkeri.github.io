@@ -11,8 +11,8 @@ let inventoryTools = [];
 let inventoryConsumables = [];
 let inventoryEquipment = [];
 let quests = [];
-let equippedTool = "none";
-let equippedHelmet = "none";
+let equippedTool = "Stick"; //Completely Useless
+let equippedHelmet = "USB stick"; //Completely Useless
 //Dialogues 
 function librarianDialogue() {
     print("\nLibrarian: Hello there! Welcome to the library. We have a wide selection of books on various topics. Is there anything specific you're looking for?");
@@ -99,26 +99,26 @@ function equipCommand(type, item) {
         if (inventoryTools.includes(item)) {
             print("You have equipped the " + item + "!");
             // Add logic to equip the tool and apply its effects
+            inventoryTools.push(equippedTool);
+            inventoryTools.splice(inventoryTools.indexOf(item), 1);
             equippedTool = item;
         } else {
             print("You don't have that tool in your inventory!");
         }
-    } else if (type === "consumable") {
-        if (inventoryConsumables.includes(item)) {
-            print("You have used the " + item + "!");
-            // Add logic to use the consumable and apply its effects
-        } else {
-            print("You don't have that consumable in your inventory!");
-        }
+
     } else if (type === "equipment") {
-        if (inventoryEquipment.includes(item)) {
+        if (inventoryHelmet.includes(item)) {
             print("You have equipped the " + item + "!");
             // Add logic to equip the equipment and apply its effects
+            inventoryHelmet.push(equippedHelmet);
+            inventoryHelmet.splice(inventoryHelmet.indexOf(item), 1);
+            equippedHelmet = item;
+
         } else {
             print("You don't have that equipment in your inventory!");
         }
     }
-
+}
 //Main Areas
 function cloudGate() {
     currentLocation = "cloudGate";
