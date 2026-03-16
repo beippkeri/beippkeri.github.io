@@ -180,6 +180,7 @@ function backDown() {
     );
     function processInput(input){
         if (input.toLowerCase() === "cloudgate") {
+            clear();
             print("\nYou tried to enter the cloud gate.");
             print("\nIt's locked");
             print("I guess that's the end");
