@@ -153,6 +153,8 @@ function cloudGate() {
     function processInput(input){
         if (input.toLowerCase() === "cloudtown") {
             cloudTown();
+        } else if (input.toLowerCase() === "backdown") {
+            backDown();
         } else if (input[0] === ".") {
             // Handle help command
             if (input.toLowerCase() === ".help") {
