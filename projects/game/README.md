@@ -47,6 +47,7 @@ current name: Cloud World
 This game is set in some sort of "cloud world" which is a sequel to one my friend's other game.
 You have just approached a gate to a cloud world, to escape, you have to earn enough money to beat the evil controlling them.
 Simple game similar to terminus
+You can also go back down for some reason (a way to end the game), if you want content please don't
 
 variables:
 
