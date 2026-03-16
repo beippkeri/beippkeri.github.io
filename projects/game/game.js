@@ -13,6 +13,27 @@ let inventoryEquipment = [];
 let quests = [];
 let equippedTool = "Stick"; //Completely Useless
 let equippedHelmet = "USB stick"; //Completely Useless
+let miningSpeed = 1; //affects time taken to mine
+let miningLuck = 1; //affects weight
+let miningBlocks = ['coal', 'iron', 'gold', 'diamond', 'ruby', 'obsidian', 'god']; //blocks that can be mined, in order of rarity
+let blockWeights = {
+    'coal': 75000,
+    'iron': 20000,
+    'gold': 4000,
+    'diamond': 800,
+    'ruby': 100,
+    'obsidian': 99,
+    'god': 1
+};
+let blockValues = {
+    'coal': 1,
+    'iron': 5,
+    'gold': 50,
+    'diamond': 250,
+    'ruby': 5000,
+    'obsidian': 10000,
+    'god': 10000000
+};
 //Dialogues 
 function librarianDialogue() {
     print("\nLibrarian: Hello there! Welcome to the library. We have a wide selection of books on various topics. Is there anything specific you're looking for?");
@@ -84,7 +105,7 @@ function helpCommand() {
         + "\n\tIf you ever finish interacting with npcs, check the locations for new options. You never know what you might find!"
     );
 }
-function inventoryCommand() {
+function inventoryCommand() { //need to add equipping
     print("Inventory:"
         + "\n\tTools: " + inventoryTools.join(", ")
         + "\n\tConsumables: " + inventoryConsumables.join(", ")
@@ -126,6 +147,7 @@ function cloudGate() {
     print("\nYou have just approached a cloud gate? Will you enter it?");
     print("\nWhere do you want to go?"
          + "\n\tCloudTown"
+         + "\n\tBackDown"
     );
     
     function processInput(input){
@@ -147,7 +169,37 @@ function cloudGate() {
     }
     waitForInput(processInput);
 }
-
+function backDown() {
+    currentLocation = "backDown";
+    clear();
+    print("\nYou have decided to turn back down the mountain. You can try entering the cloud gate again if you want to.");
+    print("\nWhere do you want to go?"
+            + "\n\tCloudGate"
+    );
+    function processInput(input){
+        if (input.toLowerCase() === "cloudgate") {
+            print("\nYou tried to enter the cloud gate.");
+            print("\nIt's locked");
+            print("I guess that's the end");
+            print("Is this some sort of \"bad ending\"? Maybe. But I don't really have any more content planned for this part");
+            print("Thanks for playing!");
+            gameActive = false;
+        } else if (input[0] === ".") {
+            // Handle help command
+            if (input.toLowerCase() === ".help") {
+                helpCommand();
+            } else if (input.toLowerCase() === ".inventory") {
+                inventoryCommand();
+            } else {
+                stayHere();
+            }
+        } else {
+            stayHere();
+            waitThenCall(backDown);
+        }
+    }
+    waitForInput(processInput);
+}s
 function cloudTown() {
     currentLocation = "cloudTown";
     clear();
@@ -203,7 +255,7 @@ function cloudTownWest() {
     );
     
     function processInput(input){
-        if (input.toLowerCase() === "cloudtown") {
+        if (input.toLowerCase() === "cloudTown") {
             cloudTown();
         } else if (input[0] === ".") {
             // Handle help command

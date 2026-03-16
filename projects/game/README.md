@@ -61,6 +61,11 @@ quests - list of quests
 talkedtoclerk - unlocks quests
 equippedhelmet - equipped helmet
 equippedtool - equipped tool
+miningLuck: luck
+miningSpeed: time taken
+miningBlocks: block list
+miningWeight: block weight
+
 quests (mining):
 mine 25 stone
 mine 25 coal
