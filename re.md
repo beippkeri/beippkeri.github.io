@@ -1,0 +1,17 @@
+rrjrnjrbofjcehlclecgbsjrgcblesrcg
+rknfegt
+cg
+gtc
+cgtw
+cgt
+cgtw
+cgt
+gwt
+ctg
+ce
+cg
+cergcegct
+c
+c
+cg
+ecrgt
