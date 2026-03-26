@@ -1,6 +1,6 @@
 let canvas = document.getElementById("canvas1");
 let ctx = canvas.getContext("2d");
-ctx.fillStyle = 'black'
+ctx.fillStyle = 'black' //idk
 for (let blockY = 0; blockY <= 200; blockY += 100) {
     for (let blockX = 0; blockX < 800; blockX += 100) {
         ctx.fillRect(blockX, blockY, 50, 20);
