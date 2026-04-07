@@ -1,66 +1,204 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="media/logo.png" type="image/png">
-    <script src="script.js"></script>
-    <style>
-body {
-    background-color: #C7E6FD;
-    color: #000;
-    border-radius: 10px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zander's Lawn Care</title>
+
+<style>
+* { box-sizing: border-box; font-family: Arial; }
+body { margin: 0; background: #f4f4f4; }
+
+header {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
-#location {
-    display: grid;
-    grid-template-columns: "left right" 1fr 1fr;
-    width: 100vw;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: clamp(12px, 1.5vw, 20px);
-    font-weight: bold;
+
+.container {
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+.section {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ddd;
+}
+
+button.active {
+  background: #2e7d32;
+  color: white;
+}
+
+#result {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+}
+
+.contact button {
+  width: 100%;
+  margin-top: 10px;
+  background: #2e7d32;
+  color: white;
 }
 </style>
 </head>
+
 <body>
-    <main>
-    <form action="https://formspree.io/f/maqbgqad" method="POST" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 3vh; color: black;"> <!-- i quit i get php now --> 
-        <div id="first-last" style="display: flex; flex-direction: row; gap: 10px; justify-content: center; height: 3vh; margin-bottom: 20px; width: clamp(300px, 80vw, 800px); margin-left: auto; margin-right: auto; font-size: clamp(10px, 1.5vw, 20px); font-weight: bold;">
-            <label for="first-name" style="text-wrap-style: nowrap;">First<span style="color: red;">*</span></label><br>
-            <input type="text" id="first-name" name="first-name" required><br><br>
-            <label for="last-name">Last<span style="color: red;">*</span></label><br>
-            <input type="text" id="last-name" name="last-name" required><br><br>
-        </div>
-        <div id="email-subject" style="display: flex; flex-direction: row; gap: 10px; justify-content: center; height: 3vh; margin-bottom: 20px; width: clamp(300px, 80vw, 800px); margin-left: auto; margin-right: auto; font-size: clamp(10px, 1.5vw, 20px); font-weight: bold;">
-            <label for="email">Email<span style="color: red;">*</span></label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="subject">Subject<span style="color: red;">*</span></label><br>
-            <select id="subject" name="subject" required>
-                <option value="lawnmowing">🌱 Lawn Mowing</div>
-                <option value="yardcleanups">🍂 Yard Cleanups</div>
-                <option value="mulchinstallation">🌿 Mulch Installation</div>
-                <option value="weeding">🧹 Weeding</div>
-                <option value="bushhedge">✂️ Bush & Hedge Trimming</div>
-                <option value="edging">📏 Edging</div>
-                <option value="brushlightclearing">🌳 Brush & Light Clearing</div>
-                <option value="snowremoval">❄️ Snow Removal</div>
-                <option value="drivewayclearing">🏠 Driveway Clearing</div>
-                <option value="sidewalkshoveling">🚶 Sidewalk Shoveling</div>
-                <option value="icecontrol">🧂 Ice Control & Salting</div>
-                <option value="other">Other</option>
-            </select>
-        </div>
-        <label for="message">Leave me a message:</label><br>
-        <textarea id="message" name="message" rows="4" style="width: 50vw; height: 30vh;" required></textarea><br><br>
-        <input type="submit" value="Send" style="margin-bottom: 20px;">
-    </form>
-    <div id="location">
-        <span style="margin-right: 20vw; grid-area: left">&#128205 Arlington, VA</span>
-        <span style="margin-left: 20vw; grid-area: right;">&#128222 570-418-5199</span>
-        <a href="sms:5704185199">📲 Get a Quote by Text </a>
-    </div>
-    </main>
+
+<header>
+  <h1>Zander's Lawn Care</h1>
+  <p>Full Service Landscaping</p>
+</header>
+
+<div class="container">
+
+<!-- Yard Size -->
+<div class="section">
+  <h3>Yard Size</h3>
+  <button onclick="selectSingle(this,setYard,30)">Small ($30)</button>
+  <button onclick="selectSingle(this,setYard,50)">Medium ($50)</button>
+  <button onclick="selectSingle(this,setYard,75)">Large ($75)</button>
+</div>
+
+<!-- Lawn Services -->
+<div class="section">
+  <h3>Lawn Services</h3>
+  <button onclick="toggleService(this,'Mowing',30)">Mowing (+$30)</button>
+  <button onclick="toggleService(this,'Edging',10)">Edging (+$10)</button>
+  <button onclick="toggleService(this,'Weed Eating',15)">Weed Eating (+$15)</button>
+  <button onclick="toggleService(this,'Blowing',10)">Blowing (+$10)</button>
+</div>
+
+<!-- Yard Cleanup -->
+<div class="section">
+  <h3>Cleanup</h3>
+  <button onclick="toggleService(this,'Leaf Cleanup',50)">Leaf Cleanup (+$50)</button>
+  <button onclick="toggleService(this,'Debris Removal',40)">Debris Removal (+$40)</button>
+  <button onclick="toggleService(this,'Mulch Install',60)">Mulch Install (+$60)</button>
+</div>
+
+<!-- Landscaping -->
+<div class="section">
+  <h3>Landscaping</h3>
+  <button onclick="toggleService(this,'Bush Trimming',25)">Bush Trimming (+$25)</button>
+  <button onclick="toggleService(this,'Hedge Trimming',40)">Hedge Trimming (+$40)</button>
+  <button onclick="toggleService(this,'Weeding Beds',30)">Weeding Beds (+$30)</button>
+  <button onclick="toggleService(this,'Planting',50)">Planting (+$50)</button>
+</div>
+
+<!-- Extra Services -->
+<div class="section">
+  <h3>Extra Services</h3>
+  <button onclick="toggleService(this,'Gutter Cleaning',80)">Gutter Cleaning (+$80)</button>
+  <button onclick="toggleService(this,'Pressure Washing',100)">Pressure Washing (+$100)</button>
+</div>
+
+<!-- Difficulty -->
+<div class="section">
+  <h3>Difficulty</h3>
+  <button onclick="selectSingle(this,setDifficulty,0)">Normal</button>
+  <button onclick="selectSingle(this,setDifficulty,20)">Overgrown (+$20)</button>
+  <button onclick="selectSingle(this,setDifficulty,40)">Very Overgrown (+$40)</button>
+</div>
+
+<!-- Total -->
+<div class="section">
+  <h3>Total Price</h3>
+  <p id="result">$0</p>
+</div>
+
+<!-- Contact -->
+<div class="section contact">
+  <h3>Send Quote</h3>
+  <input id="name" placeholder="Your Name">
+  <input id="phone" placeholder="Phone Number">
+  <button onclick="sendQuote()">Text Quote</button>
+</div>
+
+</div>
+
+<script>
+let yard = 0;
+let difficulty = 0;
+let services = {};
+
+function selectSingle(btn, func, value) {
+  let group = btn.parentElement.querySelectorAll("button");
+  group.forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  func(value);
+}
+
+function setYard(val) {
+  yard = val;
+  updateTotal();
+}
+
+function setDifficulty(val) {
+  difficulty = val;
+  updateTotal();
+}
+
+function toggleService(btn, name, price) {
+  if (services[name]) {
+    delete services[name];
+    btn.classList.remove("active");
+  } else {
+    services[name] = price;
+    btn.classList.add("active");
+  }
+  updateTotal();
+}
+
+function updateTotal() {
+  let total = yard + difficulty;
+
+  for (let s in services) {
+    total += services[s];
+  }
+
+  let high = Math.round(total * 1.25);
+
+  document.getElementById("result").innerText =
+    `$${total} - $${high}`;
+}
+
+function sendQuote() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let price = document.getElementById("result").innerText;
+
+  if (!name || !phone) {
+    alert("Enter name and phone");
+    return;
+  }
+
+  let message = `Hi ${name}, your landscaping quote is ${price}.`;
+
+  window.location.href =
+    `sms:${phone}?body=${encodeURIComponent(message)}`;
+}
+</script>
+
 </body>
 </html>
