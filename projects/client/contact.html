@@ -131,13 +131,13 @@ button.active {
 <div class="section contact">
   <h3>Send Quote</h3>
   <input id="name" placeholder="Your Name">
-  <input id="phone" placeholder="Phone Number">
   <button onclick="sendQuote()">Text Quote</button>
 </div>
 
 </div>
 
 <script>
+const zanderPhone = "+1 570-418-5199"
 let yard = 0;
 let difficulty = 0;
 let services = {};
@@ -185,10 +185,9 @@ function updateTotal() {
 
 function sendQuote() {
   let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
   let price = document.getElementById("result").innerText;
 
-  if (!name || !phone) {
+  if (!name) {
     alert("Enter name and phone");
     return;
   }
@@ -196,7 +195,7 @@ function sendQuote() {
   let message = `Hi ${name}, your landscaping quote is ${price}.`;
 
   window.location.href =
-    `sms:${phone}?body=${encodeURIComponent(message)}`;
+    `sms:${zanderPhone}?body=${encodeURIComponent(message)}`;
 }
 </script>
 
