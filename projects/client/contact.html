@@ -1,201 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zander's Lawn Care</title>
-
+<title>Zander's Lawn Care PRO</title>
 <style>
-* { box-sizing: border-box; font-family: Arial; }
-body { margin: 0; background: #f4f4f4; }
-
-header {
-  background: #2e7d32;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.container {
-  max-width: 550px;
-  margin: 20px auto;
-  padding: 15px;
-}
-
-.section {
-  background: white;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-}
-
-button {
-  padding: 10px;
-  margin: 5px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  background: #ddd;
-}
-
-button.active {
-  background: #2e7d32;
-  color: white;
-}
-
-#result {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.contact input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-}
-
-.contact button {
-  width: 100%;
-  margin-top: 10px;
-  background: #2e7d32;
-  color: white;
-}
+body {font-family: Arial; background:#eef2f3; padding:20px;}
+.container {max-width:600px;margin:auto;background:white;padding:20px;border-radius:10px;}
+h1{text-align:center;color:#2e7d32;}
+button{margin:5px;padding:10px;border:none;border-radius:6px;background:#2e7d32;color:white;cursor:pointer;}
+button.active{background:#1b5e20;}
+input, select{width:100%;padding:8px;margin:5px 0;}
+.section{margin-top:15px;}
+.invoice{margin-top:20px;padding:15px;border:2px solid black;}
 </style>
 </head>
 
 <body>
-
-<header>
-  <h1>Zander's Lawn Care</h1>
-  <p>Full Service Landscaping</p>
-</header>
-
 <div class="container">
+<h1>Zander's Lawn Care PRO</h1>
 
-<!-- Yard Size -->
 <div class="section">
-  <h3>Yard Size</h3>
-  <button onclick="selectSingle(this,setYard,30)">Small ($30)</button>
-  <button onclick="selectSingle(this,setYard,50)">Medium ($50)</button>
-  <button onclick="selectSingle(this,setYard,75)">Large ($75)</button>
+<h3>Customer Name</h3>
+<input id="customer" placeholder="Enter customer name">
 </div>
 
-<!-- Lawn Services -->
 <div class="section">
-  <h3>Lawn Services</h3>
-  <button onclick="toggleService(this,'Mowing',30)">Mowing (+$30)</button>
-  <button onclick="toggleService(this,'Edging',10)">Edging (+$10)</button>
-  <button onclick="toggleService(this,'Weed Eating',15)">Weed Eating (+$15)</button>
-  <button onclick="toggleService(this,'Blowing',10)">Blowing (+$10)</button>
+<h3>Yard Size</h3>
+<button onclick="setYard(40)">Small</button>
+<button onclick="setYard(60)">Medium</button>
+<button onclick="setYard(80)">Large</button>
 </div>
 
-<!-- Yard Cleanup -->
 <div class="section">
-  <h3>Cleanup</h3>
-  <button onclick="toggleService(this,'Leaf Cleanup',50)">Leaf Cleanup (+$50)</button>
-  <button onclick="toggleService(this,'Debris Removal',40)">Debris Removal (+$40)</button>
-  <button onclick="toggleService(this,'Mulch Install',60)">Mulch Install (+$60)</button>
+<h3>Services</h3>
+<button onclick="toggle('Mowing',30)">Mowing</button>
+<button onclick="toggle('Edging',15)">Edging</button>
+<button onclick="toggle('Weed Eating',20)">Weed Eating</button>
+<button onclick="toggle('Bush Trimming',40)">Bush Trimming</button>
+<button onclick="toggle('Leaf Cleanup',70)">Leaf Cleanup</button>
+<button onclick="toggle('Sod Install',100)">Sod Install</button>
+<button onclick="toggle('Snow Removal',40)">Snow Removal</button>
 </div>
 
-<!-- Landscaping -->
 <div class="section">
-  <h3>Landscaping</h3>
-  <button onclick="toggleService(this,'Bush Trimming',25)">Bush Trimming (+$25)</button>
-  <button onclick="toggleService(this,'Hedge Trimming',40)">Hedge Trimming (+$40)</button>
-  <button onclick="toggleService(this,'Weeding Beds',30)">Weeding Beds (+$30)</button>
-  <button onclick="toggleService(this,'Planting',50)">Planting (+$50)</button>
+<h3>Difficulty</h3>
+<button onclick="setDifficulty(0)">Normal</button>
+<button onclick="setDifficulty(25)">Overgrown</button>
+<button onclick="setDifficulty(50)">Very Overgrown</button>
 </div>
 
-<!-- Extra Services -->
 <div class="section">
-  <h3>Extra Services</h3>
-  <button onclick="toggleService(this,'Gutter Cleaning',80)">Gutter Cleaning (+$80)</button>
-  <button onclick="toggleService(this,'Pressure Washing',100)">Pressure Washing (+$100)</button>
+<h3>Material Calculator</h3>
+<input id="area" placeholder="Area (sq ft)">
+<input id="depth" placeholder="Depth (inches)">
+<label>Select Materials:</label><br>
+<input type="checkbox" id="Mulch" value="Mulch"> Mulch ($50/yd³)<br>
+<input type="checkbox" id="Gravel" value="Gravel"> Gravel ($60/yd³)<br>
+<input type="checkbox" id="Dirt" value="Dirt"> Dirt ($40/yd³)<br>
+<button onclick="calcMaterials()">Calculate Materials</button>
+<p id="materials">Enter area, depth, and select materials</p>
 </div>
 
-<!-- Difficulty -->
 <div class="section">
-  <h3>Difficulty</h3>
-  <button onclick="selectSingle(this,setDifficulty,0)">Normal</button>
-  <button onclick="selectSingle(this,setDifficulty,20)">Overgrown (+$20)</button>
-  <button onclick="selectSingle(this,setDifficulty,40)">Very Overgrown (+$40)</button>
+<h3>Snow Removal Calculator</h3>
+<input id="snowArea" placeholder="Snow area (sq ft)">
+<input id="snowDepth" placeholder="Snow depth (inches)">
+<button onclick="calcSnow()">Calculate Snow</button>
+<p id="snowCalc">Enter snow area and depth</p>
 </div>
 
-<!-- Total -->
 <div class="section">
-  <h3>Total Price</h3>
-  <p id="result">$0</p>
+<h3>Labor Calculator</h3>
+<input id="hours" placeholder="Hours worked">
+<p id="labor">Labor: $0 (fixed rate $40/hr)</p>
 </div>
 
-<!-- Contact -->
-<div class="section contact">
-  <h3>Send Quote</h3>
-  <input id="name" placeholder="Your Name">
-  <button onclick="sendQuote()">Text Quote</button>
+<div class="section">
+<h3>Total Price</h3>
+<p id="price">$0</p>
 </div>
 
+<button onclick="generateInvoice()">Generate Invoice</button>
+<div id="invoice" class="invoice" style="display:none;"></div>
+<button onclick="window.print()">Print / Save</button>
 </div>
 
 <script>
-const zanderPhone = "+1 570-418-5199"
-let yard = 0;
-let difficulty = 0;
-let services = {};
+let yard=0, difficulty=0, services={};
+const laborRate=40;
+let materialCost=0;
+let materialDetails="";
+let snowCost=0;
+let snowDetails="";
 
-function selectSingle(btn, func, value) {
-  let group = btn.parentElement.querySelectorAll("button");
-  group.forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
-  func(value);
+function setYard(val){yard=val; update();}
+function setDifficulty(val){difficulty=val; update();}
+
+function toggle(name,val){
+  if(services[name]) delete services[name];
+  else services[name]=val;
+  update();
 }
 
-function setYard(val) {
-  yard = val;
-  updateTotal();
+function update(){
+  let total=yard+difficulty;
+  for(let s in services){total+=services[s];}
+  let h=document.getElementById("hours").value;
+  let labor=(h)?h*laborRate:0;
+  document.getElementById("labor").innerText="Labor: $"+labor+" (rate $40/hr)";
+  document.getElementById("price").innerText="$"+(total+labor+Number(materialCost)+Number(snowCost));
 }
 
-function setDifficulty(val) {
-  difficulty = val;
-  updateTotal();
+function calcMaterials(){
+  let area=document.getElementById("area").value;
+  let depth=document.getElementById("depth").value;
+  if(!area||!depth){document.getElementById("materials").innerText="Enter area and depth"; return;}
+  
+  let yards=((area*depth)/12/27).toFixed(2);
+  materialCost=0;
+  materialDetails="";
+  
+  const materials = ["Mulch","Gravel","Dirt"];
+  const costs = {"Mulch":50, "Gravel":60, "Dirt":40};
+  
+  materials.forEach(mat=>{
+    if(document.getElementById(mat).checked){
+      let cost = (yards*costs[mat]).toFixed(2);
+      materialCost += Number(cost);
+      materialDetails += `${mat}: ${yards} yd³ - $${cost}<br>`;
+    }
+  });
+  
+  if(materialDetails==="") materialDetails="No materials selected";
+  document.getElementById("materials").innerHTML=materialDetails;
+  update();
 }
 
-function toggleService(btn, name, price) {
-  if (services[name]) {
-    delete services[name];
-    btn.classList.remove("active");
-  } else {
-    services[name] = price;
-    btn.classList.add("active");
-  }
-  updateTotal();
+function calcSnow(){
+  let area=document.getElementById("snowArea").value;
+  let depth=document.getElementById("snowDepth").value;
+  if(!area||!depth){document.getElementById("snowCalc").innerText="Enter snow area and depth"; return;}
+  
+  let yards=((area*depth)/12/27).toFixed(2);
+  snowCost=40;
+  snowDetails=`Snow Removal: ${yards} yd³ estimated - $${snowCost}`;
+  document.getElementById("snowCalc").innerHTML=snowDetails;
+  update();
 }
 
-function updateTotal() {
-  let total = yard + difficulty;
+function generateInvoice(){
+  let name=document.getElementById("customer").value;
+  let total=yard+difficulty;
+  let list="";
+  for(let s in services){total+=services[s]; list+=`<li>${s} - $${services[s]}</li>`;}
+  let h=document.getElementById("hours").value;
+  let labor=(h)?h*laborRate:0;
 
-  for (let s in services) {
-    total += services[s];
-  }
-
-  let high = Math.round(total * 1.25);
-
-  document.getElementById("result").innerText =
-    `$${total} - $${high}`;
-}
-
-function sendQuote() {
-  let name = document.getElementById("name").value;
-  let price = document.getElementById("result").innerText;
-
-  if (!name) {
-    alert("Enter name and phone");
-    return;
-  }
-
-  let message = `Hi ${name}, your landscaping quote is ${price}.`;
-
-  window.location.href =
-    `sms:${zanderPhone}?body=${encodeURIComponent(message)}`;
+  document.getElementById("invoice").style.display="block";
+  document.getElementById("invoice").innerHTML=`
+    <h2>Invoice</h2>
+    <p><b>Customer:</b> ${name}</p>
+    <ul>
+      <li>Yard Base: $${yard}</li>
+      ${list}
+      <li>Difficulty: $${difficulty}</li>
+      <li>Labor: $${labor} (rate $40/hr)</li>
+      ${materialDetails ? `<li>Materials: <br>${materialDetails}</li>` : ""}
+      ${snowDetails ? `<li>${snowDetails}</li>` : ""}
+    </ul>
+    <h3>Total: $${total+labor+Number(materialCost)+Number(snowCost)}</h3>
+  `;
 }
 </script>
 
