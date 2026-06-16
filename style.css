@@ -1,12 +1,12 @@
 body {
-    background-color: #aa0000;
-    color: cornsilk;
+    background-color: #fff;
+    color: rgb(47, 44, 30);
 }
 h1 {
-    color: aquamarine
+    color: rebeccapurple;
 }
 a {
-    color: gold;
+    color: black;
 }
 .work {
     display: flex;
