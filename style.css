@@ -8,6 +8,12 @@ h1 {
 a {
     color: gold;
 }
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 10vw;
+}
 #projects, #practice, #notes {
     display: flex;
     flex-wrap: wrap;
@@ -15,5 +21,12 @@ a {
     border: 1px solid #ccc;
     padding: 20px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    margin-right: 70vw;
+    width: 20vw;
+    height: 5vh;
+    text-align: center;
+}
+h2 {
+    margin: auto;
+    margin-top: 0;
+    font-size: 1.5vmax;
 }
