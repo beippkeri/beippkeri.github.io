@@ -1,13 +1,15 @@
-#projects {
+#projects-base {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    height: 90vh;
 }
 .project {
     border: 1px solid #ccc;
     padding: 20px;
-    width: 300px;
+    width: 25vw;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    height: 20vh;
 }
 .project h2 {
     margin-top: 0;
@@ -16,7 +18,32 @@ a {
     text-decoration: none;
     color: inherit;
 }
-.project :hover {
+#projects-base .project:hover {
     border-color: #007BFF;
     box-shadow: 2px 2px 10px rgba(0,123,255,0.2);
+}
+#recipes {
+    background-color: #f8f9fa;
+    height: 90vh;
+}
+#encryption {
+    background-color: #e9ecef;
+    height: 90vh;
+}
+#client {
+    background-color: #dee2e6;
+    height: 90vh;
+}
+#textgame {
+    background-color: #ced4da;
+    height: 90vh;
+}
+#videogame {
+    background-color: #adb5bd;
+    height: 90vh;
+}
+img {
+    max-width: 50vw;
+    height: auto;
+    min-width: 40vw;
 }
