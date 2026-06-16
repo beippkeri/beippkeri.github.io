@@ -2,48 +2,87 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 20px;
     height: 90vh;
+    align-items: stretch;
 }
+
 .project {
+    display: block;
     border: 1px solid #ccc;
     padding: 20px;
     width: 25vw;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    height: 20vh;
+    min-height: 20vh;
+    height: auto;
+    box-sizing: border-box;
 }
+
 .project h2 {
     margin-top: 0;
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
+
 #projects-base .project:hover {
     border-color: #007BFF;
     box-shadow: 2px 2px 10px rgba(0,123,255,0.2);
 }
+
+/* Lower sections: make the images fit nicely */
+#recipes,
+#encryption,
+#client,
+#game,
+#mahnamejoks {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 #recipes {
     background-color: #f8f9fa;
-    height: 90vh;
 }
+
 #encryption {
     background-color: #e9ecef;
-    height: 90vh;
 }
+
 #client {
     background-color: #dee2e6;
-    height: 90vh;
 }
-#textgame {
+
+#game {
     background-color: #ced4da;
-    height: 90vh;
 }
-#videogame {
+
+#mahnamejoks {
     background-color: #adb5bd;
-    height: 90vh;
 }
+
+#recipes img,
+#encryption img,
+#client img,
+#game img,
+#mahnamejoks img {
+    width: min(70vw, 900px);
+    height: min(60vh, 600px);
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
 img {
-    max-width: 50vw;
-    height: auto;
-    min-width: 40vw;
+    max-width: 900px;
 }
+.project img{
+    width: 80vw;
+}
+
