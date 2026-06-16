@@ -143,4 +143,12 @@ a {
         min-width: 0;
     }
 }
-
+.practicelist {
+    list-style-type: none;
+    margin: 8px 0;
+    background: rgba(255, 193, 7, 0.12);
+    border: 1px solid black;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-right: 5vw;
+}
