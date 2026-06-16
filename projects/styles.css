@@ -6,8 +6,6 @@
     height: 90vh;
     align-items: stretch;
 }
-
-/* Main clickable cards */
 .project {
     display: block;
     border: 1px solid #ccc;
@@ -39,7 +37,6 @@ a {
     }
 }
 
-/* Big sections (image left + text right) */
 .project-section {
     height: 90vh;
     display: flex;
@@ -79,8 +76,24 @@ a {
 }
 
 .section-text {
-    flex: 1 1 auto;
+    flex: 0 1 520px;
     max-width: 520px;
+}
+
+.section-side {
+    flex: 1 1 320px;
+    max-width: 420px;
+    min-width: 240px;
+    border-left: 1px dashed rgba(0, 0, 0, 0.25);
+    padding-left: 22px;
+    height: 60vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.section-side {
+    /* purely layout container; you can put cards/widgets inside */
 }
 
 .section-text h2 {
@@ -108,6 +121,7 @@ a {
         justify-content: center;
         height: auto;
         padding: 30px 16px;
+        gap: 20px;
     }
 
     .section-image {
@@ -117,6 +131,16 @@ a {
 
     .section-text {
         max-width: 90vw;
+    }
+
+    .section-side {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px dashed rgba(0, 0, 0, 0.25);
+        padding-top: 16px;
+        height: auto;
+        max-width: 90vw;
+        min-width: 0;
     }
 }
 
